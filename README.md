@@ -3,18 +3,17 @@
   ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/homeverse)
   ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/homeverse?style=social)
   ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/homeverse?style=social)
-  [![Twitter Follow](https://twitter.com/A27Leonardo_?style=social)](https://twitter.com/intent/follow?screen_name=A27Leonardo_)
 
   <br />
   <br />
   
-  <img src="https://github.com/Boostrap-Proyects/Ecuaciones-Diferenciales/blob/main/assets/images/hero-banner.png" />
+  <img src="https://github.com/Boostrap-Proyects/Ecuaciones-Diferenciales/blob/main/assets/images/logo-top.png" />
 
   <h2 align="center">Ecuaciones Diferenciales - website</h2>
 
   Una aplicación unificadora de los temas sobre ecuaciones diferenciales para su resolución y estudio.
 
-  <a href="https://kolorum.com/ecuacionesdif/"><strong>➥ Live Demo</strong></a>
+<a href="https://kolorum.com/ecuacionesdif/" target="_blank"><strong>➥ Live Demo</strong></a>
 
 </div>
 
