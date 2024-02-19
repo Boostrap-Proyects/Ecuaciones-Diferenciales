@@ -3,7 +3,7 @@
   ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/homeverse)
   ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/homeverse?style=social)
   ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/homeverse?style=social)
-[![Twitter Follow](https://twitter.com/A27Leonardo)](https://twitter.com/A27Leonardo)
+[![Twitter Follow](https://twitter.com/A27Leonardo?style=social)](https://twitter.com/A27Leonardo)
 
   <br />
   <br />
