@@ -3,17 +3,16 @@
   ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/homeverse)
   ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/homeverse?style=social)
   ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/homeverse?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/6HZ4nZmU_pE?style=social)](https://youtu.be/6HZ4nZmU_pE)
+[![Twitter Follow](https://twitter.com/A27Leonardo)](https://twitter.com/A27Leonardo)
 
   <br />
   <br />
   
-  <img src="./readme-images/project-logo.png" />
+  <img src="https://github.com/Boostrap-Proyects/Ecuaciones-Diferenciales/blob/main/assets/images/logo.png" />
 
-  <h2 align="center">Homeverse - Real estate website</h2>
+  <h2 align="center">Ecuaciones Diferenciales - website</h2>
 
-  Homeverse is fully responsive Real estate website, <br />Responsive for all devices, built using HTML, CSS, and JavaScript.
+  Una aplicación unificadora de los temas sobre ecuaciones diferenciales para su resolución y estudio.
 
   <a href="https://codewithsadee.github.io/homeverse/"><strong>➥ Live Demo</strong></a>
 
@@ -23,8 +22,8 @@
 
 ### Demo Screeshots
 
-![homeverse Desktop Demo](./readme-images/desktop.png "Desktop Demo")
-![homeverse Mobile Demo](./readme-images/mobile.png "Mobile Demo")
+![homeverse Desktop Demo](https://github.com/Boostrap-Proyects/Ecuaciones-Diferenciales/blob/main/assets/images/demo1.png "Inicio")
+![homeverse Mobile Demo](https://github.com/Boostrap-Proyects/Ecuaciones-Diferenciales/blob/main/assets/images/demo2.png "Servicios")
 
 ### Prerequisites
 
@@ -39,19 +38,11 @@ To run **Homeverse** locally, run this command on your git bash:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/homeverse.git
+sudo git clone https://github.com/Boostrap-Proyects/Ecuaciones-Diferenciales.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/homeverse.git
+git clone https://github.com/Boostrap-Proyects/Ecuaciones-Diferenciales.git
 ```
-
-### Contact
-
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-### License
-
-This project is **free to use** and does not contains any license.
