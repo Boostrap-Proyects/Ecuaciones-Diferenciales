@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema de Crecimiento</title>
+
+    <!-- #FAVICON -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- #CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- #GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header" data-header>
+        <div class="overlay" data-overlay></div>
+
+        <!-- #HEADER TOP -->
+        <div class="header-top">
+            <div class="container">
+
+                <ul class="header-top-list">
+
+                    <li>
+                        <a href="mailto:lacosta2712@gmail.com" target="_blank" class="header-top-link">
+                            <ion-icon name="mail-outline"></ion-icon>
+
+                            <span>lacosta2712@gmail.com</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.google.com/maps/place/Montemorelos+University/@25.1925767,-99.8481377,17z/data=!4m6!3m5!1s0x867cd6e2bd190e2f:0x8a690c81c38aa44!8m2!3d25.1925719!4d-99.8455628!16s%2Fm%2F03qjh1n?entry=ttu"
+                            target="_blank" class="header-top-link">
+                            <ion-icon name="location-outline"></ion-icon>
+
+                            <address>Universidad de Montemorelos NL</address>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="wrapper">
+                    <ul class="header-top-social-list">
+
+                        <li>
+                            <a href="#" class="header-top-social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="header-top-social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="header-top-social-link">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="header-top-social-link">
+                                <ion-icon name="logo-pinterest"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <button class="header-top-btn">Repositorio</button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- #HEADER BOTTOM -->
+        <div class="header-bottom">
+            <div class="container">
+
+                <a href="index.html" class="logo">
+                    <img src="./assets/images/logo-top.png" alt="logo-fitec">
+                </a>
+
+                <nav class="navbar" data-navbar>
+
+                    <div class="navbar-top">
+
+                        <a href="#" class="logo">
+                            <img src="./assets/images/logo-top.png" alt="logo-fitec">
+                        </a>
+
+                        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+
+                    </div>
+
+                    <div class="navbar-bottom">
+                        <ul class="navbar-list">
+            
+                          <li>
+                            <a href="index.html#inicio" class="navbar-link" data-nav-link>Inicio</a>
+                          </li>
+            
+                          <li>
+                            <a href="index.html#equipo" class="navbar-link" data-nav-link>Equipo</a>
+                          </li>
+            
+                          <li>
+                            <a href="index.html#material" class="navbar-link" data-nav-link>Material</a>
+                          </li>
+            
+                          <li>
+                            <a href="index.html#servicios" class="navbar-link" data-nav-link>Servicios</a>
+                            <ul class="submenu navbar-link">
+                                <li><a class="hover-text" href="solucionadorSNH.html">Solucionador de SNH</a></li>
+                                <li><a class="hover-text" href="problemasCI.html">Problemas EDO de CI</a></li>
+                                <li><a class="hover-text" href="#">Teoría y fórmulas</a></li>
+                                <li><a class="hover-text" href="#">Ejercicios para el cuaderno</a></li>
+                            </ul>
+                        </li>
+            
+                        </ul>
+                      </div>
+
+                </nav>
+
+                <div class="header-bottom-actions">
+
+                    <button class="header-bottom-actions-btn" aria-label="Search">
+                        <ion-icon name="search-outline"></ion-icon>
+
+                        <span>Search</span>
+                    </button>
+
+                    <button class="header-bottom-actions-btn" aria-label="Profile">
+                        <ion-icon name="person-outline"></ion-icon>
+
+                        <span>Profile</span>
+                    </button>
+
+                    <button class="header-bottom-actions-btn" aria-label="Cart">
+                        <ion-icon name="code-outline"></ion-icon>
+
+                        <span>Code</span>
+                    </button>
+
+                    <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+                        <ion-icon name="menu-outline"></ion-icon>
+
+                        <span>Menu</span>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <section class="service">
+                <div class="container">
+                    <h2 class="h2 section-title">Crecimiento y decrecimiento natural</h2>
+                </div>
+            </section>
+
+            <section class="features" id="contacto" style="background: hsl(0, 0%, 100%);">
+                <div class="container">
+                    <p class="section-subtitle" style="font-size: 1.5em; font: weight 20px;">Teoría</p>
+                    <p style="text-align: justify;">
+                        Las aplicaciones de este modelo pueden variar entre crecimiento de una población de bacterias, media-vida 
+                        (variable que se usa para describir la estabilidad de sustancias radiactivas), pruebas de carbono 14 (para medir qué tan antiguo es un fósil) 
+                        o incluso para determinar en cuánto tiempo se enfría una torta, sin embargo, durante este curso consideraremos de forma particular la forma en 
+                        que crece la población de una determinada localidad.
+                    </p>
+                    <br>
+                    <p style="text-align: justify;">
+                        Formalmente, si definimos la variable P(t) para denotar el tamaño de la población en un tiempo t, la forma en que varía el tamaño de la población respecto 
+                        al tiempo se puede describir calculando la derivada de la variable P respecto al tiempo t, es decir:
+                    </p>
+                    <br>
+                    <p class="formulas">
+                        La ecuación diferencial <sup>dx</sup>&frasl;<sub>dt</sub> = kx , k ∈ ℝ
+                    </p>
+                    <br>
+                    <p style="text-align: justify;">
+                        Para poder emplear este tipo de modelos, debemos suponer que la forma en que varía la población en un instante de tiempo t es 
+                        proporcional al tamaño de la población en dicho tiempo t, de esta forma, obtenemos la siguiente igualdad:
+                    </p>
+                    <br>
+                    <p class="formulas">
+                        P'(t) = k⋅P(t) 
+                    </p>
+                    <br>
+                    <p style="text-align: justify;">
+                        Suponga un problema sobre el <strong>Crecimiento de una población</strong>, donde P(t) es el número de individuos en una población (humanos, insectos ó bacterias).
+                        Con tasas de nacimiento y mortalidad constantes β y δ entonces:
+                    </p>
+                    <br>
+                    <p class="formulas">
+                        La solución a la ecuación diferencial sería: P(t) = Ce<sup>kt</sup>
+                    </p>
+                    <br><br>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-_TXQAzK7aQ?si=lUHjurO40I8u4Ppy" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="service">
+                <div class="container">
+                    <p class="section-subtitle" style="font-size: 1.5em; font: weight 20px;">Ejemplo</p>
+                    <p style="text-align: justify;">
+                        Una ciudad tenía una población de 25,000 habitantes en 1960 y de 30,000 en 1970. Considere que
+                        su población continuara creciendo exponencialmente a una tasa constante. ¿Que población
+                        puede esperar el planificador de la ciudad para el año 2000?, ¿y para el año 2023?.
+                    </p>
+                    <br><br>
+                    <div class="img-center">
+                        <img src="./assets/images/problem1.png" style="background: transparent; border: none;"
+                            alt="Imagen">
+                    </div>
+                </div>
+            </section>
+
+            <section class="features" id="contacto" style="background: hsl(0, 0%, 100%);">
+                <div class="container">
+                    <p class="section-subtitle" style="font-size: 1.5em; font: weight 20px;">Problema</p>
+                    <p style="text-align: justify;">
+                        Para una ciudad con 10000 habitantes para el año 2000, y 130000 para el año 2020, ¿Que población
+                        se espera para el año 2045?
+                        ¿Y para el 2100?. Considere que la población crece exponencialmente a una tasa constante.
+                    </p>
+                    <br>
+                    <p style="text-align: left;">
+                        <strong>P(t) = Ce<sup>kt</sup></strong>
+                    </p>
+                    <br>
+                    <form>
+                        <div class="contenedor-problema">
+                            <label for="tiempoI">t = </label>
+                            <input class="input-problema" style="margin-right: 120px;" type="text" id="tiempoI"
+                                required>
+                            <input class="input-problema" type="text" id="poblacionI" required>
+                            <label for="potenciaI"> = Ce<sup>k</sup></label>
+                            <input type="text" class="superindice" id="potenciaI" required>
+                            <span> = C</span>
+                            <div id="c1" style="margin-left: 120px;"></div>
+                            <br>
+                        </div>
+                        <br>
+                        <div class="contenedor-problema">
+                            <label for="tiempoF">t = </label>
+                            <input class="input-problema" style="margin-right: 120px;" type="text" id="tiempoF"
+                                required>
+                            <input class="input-problema" type="text" id="poblacionF" required>
+                            <label for="potenciaF"> = Ce<sup>k</sup></label>
+                            <input type="text" class="superindice" id="potenciaF" required>
+                            <div id="c2" style="margin-left: 145px;"></div>
+                        </div>
+                        <br>
+                        <div class="contenedor-problema">
+                            <button type="button" onclick="paso1Colecta(); paso1Ejecucion()"
+                                class="btn-customized">Revisar</button>
+                            <div id="mensajes1" class="error correct"></div>
+                        </div>
+                    </form>
+                    <br>
+                    <br>
+                    <form id="show2nd" class="showNextStep">
+                        <div class="contenedor-problema">
+                            <div id="c=c" style="margin-right: 100px;"></div>
+                            <label>e<sup>10k = </sup></label>
+                            <input class="input-problema" type="text" id="P1" required> /
+                            <input class="input-problema" type="text" id="P2" required>
+                        </div>
+                        <br>
+                        <div class="contenedor-problema">
+                            <button type="button" onclick="paso2Colecta(); paso2Ejecucion()"
+                                class="btn-customized">Revisar</button>
+                            <div id="mensajes2" class="error correct"></div>
+                        </div>
+                    </form>
+                    <br>
+                    <br>
+                    <form id="show3th" class="showNextStep">
+                        <div class="contenedor-problema">
+                            <div id="ultimos1" style="margin-right: 100px;"></div>
+                            <div id="ultimos2" style="margin-right: 100px;"></div>
+                            <label>k = </label>
+                            <input class="input-problema" type="text" id="PP1" required> /
+                            <input class="input-problema" type="text" id="PP2" required>
+                            <div id="equivalent" style="margin-left: 5px;"></div>
+                        </div>
+                        <br>
+                        <div class="contenedor-problema">
+                            <button type="button" onclick="paso3Colecta(); paso3Ejecucion()"
+                                class="btn-customized">Revisar</button>
+                            <div id="mensajes3" class="error correct"></div>
+                        </div>
+                    </form>
+                    <br>
+                    <br>
+                    <form id="show4th" class="showNextStep">
+                        <hr>
+                        <br>
+                        <div id="pregunta1"></div>
+                        <br>
+                        <div class="contenedor-problema">
+                            <label>t = </label>
+                            <input class="input-problema" style="margin-right: 110px;" type="text" id="tPregunta1" required>                   
+                            <label>P(<input class="input-problema" style="margin: 1px; width: 1.5em" type="text" id="ptPregunta1" required>) = 25000e</label>
+                            <input type="text" class="superindice" style="width: 4em;" id="k1" required>
+                            <label class="superindice" style="margin: 0;">(</label>
+                            <input type="text" class="superindice" style="margin-left: -20px;" id="t1" required>
+                            <label class="superindice" style="margin: 0;">)</label>
+                            <div id="habitantesP1"></div>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="pregunta2"></div>
+                        <br>
+                        <div class="contenedor-problema">
+                            <label>t = </label>
+                            <input class="input-problema" style="margin-right: 110px;" type="text" id="tPregunta2" required>                   
+                            <label>P(<input class="input-problema" style="margin: 1px; width: 1.5em" type="text" id="ptPregunta2" required>) = 25000e</label>
+                            <input type="text" class="superindice"  style="width: 4em;" id="k2" required>
+                            <label class="superindice" style="margin: 0;">(</label>
+                            <input type="text" class="superindice" style="margin-left: -20px;" id="t2" required>
+                            <label class="superindice" style="margin: 0;">)</label>
+                            <div id="habitantesP2"></div>
+                        </div>
+                        <br>
+                        <div class="contenedor-problema">
+                            <button type="button" onclick="paso4Colecta(); paso4Ejecucion()"
+                                class="btn-customized">Revisar</button>
+                            <div id="mensajes4" class="error correct"></div>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </section>
+        </article>
+    </main>
+
+
+    <!-- #FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="container">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo-bottom.png" alt="logo-fitec">
+                    </a>
+
+                    <p class="section-text">
+                        Aplicación unificadora de los temas sobre ecuaciones diferenciales para su resolución y estudio.
+                    </p>
+
+                    <ul class="contact-list">
+
+                        <li>
+                            <a href="https://www.google.com/maps/place/Montemorelos+University/@25.1925767,-99.8481377,17z/data=!4m6!3m5!1s0x867cd6e2bd190e2f:0x8a690c81c38aa44!8m2!3d25.1925719!4d-99.8455628!16s%2Fm%2F03qjh1n?entry=ttu"
+                                target="_blank" class="contact-link">
+                                <ion-icon name="location-outline"></ion-icon>
+
+                                <address>Av. Libertad 1300 Pte, Matamoros, 67515 Montemorelos, N.L.</address>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tel:+0123456789" class="contact-link">
+                                <ion-icon name="call-outline"></ion-icon>
+
+                                <span>+(826) 106 94 15</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:lacosta2712@gmail.com" target="_blank" class="contact-link">
+                                <ion-icon name="mail-outline"></ion-icon>
+
+                                <span>lacosta2712@gmail.com</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="social-list">
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer-link-box">
+
+                    <ul class="footer-list">
+
+                        <li>
+                            <p class="footer-list-title">Extras</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Cosmovisión</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Trabajos</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Galeria</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Localización</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="footer-list">
+
+                        <li>
+                            <p class="footer-list-title">Proyecto</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Repositorio</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Solicitud</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Requisitos</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Cursos</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="footer-list">
+
+                        <li>
+                            <p class="footer-list-title">Preferencias de Usuario</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Terminos & Condiciones</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Acceso Admin</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Themes</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Responsive</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+
+                <p class="copyright">
+                    &copy; 2023 - <a href="#">Ecuaciones Diferenciales</a>. Facultad de Ingenieria y Telecomunicaciones
+                </p>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- #SCRIPTS -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/problemaCrecimiento.js"></script>
+
+
+    <!-- #ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167430586-1"></script>
+    <script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-167430586-1");</script>
+
+</body>
+
+</html>
