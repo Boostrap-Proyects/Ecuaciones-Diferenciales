@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ecuaciones Diferenciales Index</title>
+  <title>ECUACIONES-DIFERENCIALES</title>
 
   <!-- #FAVICON -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
@@ -33,10 +33,10 @@
         <ul class="header-top-list">
 
           <li>
-            <a href="mailto:lacosta2712@gmail.com" target="_blank" class="header-top-link">
+            <a href="mailto:megamergezx@gmail.com" target="_blank" class="header-top-link">
               <ion-icon name="mail-outline"></ion-icon>
 
-              <span>lacosta2712@gmail.com</span>
+              <span>megamergezx@gmail.com</span>
             </a>
           </li>
 
@@ -55,32 +55,28 @@
           <ul class="header-top-social-list">
 
             <li>
-              <a href="#" class="header-top-social-link">
+              <a href="https://www.facebook.com/Facultad.de.Ingenieria.y.Tecnologia" target="_blank"
+                class="header-top-social-link">
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="#" class="header-top-social-link">
+              <a href="https://twitter.com/soyfitec" target="_blank" class="header-top-social-link">
                 <ion-icon name="logo-twitter"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
+              <a href="https://www.youtube.com/@Ecuaciones_Diferenciales" target="_blank"
+                class="header-top-social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
               </a>
             </li>
 
           </ul>
 
-          <button class="header-top-btn">Repositorio</button>
+          <!-- <button class="header-top-btn">Repositorio</button> -->
         </div>
 
       </div>
@@ -91,7 +87,7 @@
     <div class="header-bottom">
       <div class="container">
 
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
           <img src="./assets/images/logo-top.png" alt="logo-fitec">
         </a>
 
@@ -99,7 +95,7 @@
 
           <div class="navbar-top">
 
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
               <img src="./assets/images/logo-top.png" alt="logo-fitec">
             </a>
 
@@ -113,26 +109,26 @@
             <ul class="navbar-list">
 
               <li>
-                <a href="#inicio" class="navbar-link" data-nav-link>Inicio</a>
+                <a href="index.html#inicio" class="navbar-link" data-nav-link>Inicio</a>
               </li>
 
               <li>
-                <a href="#equipo" class="navbar-link" data-nav-link>Equipo</a>
+                <a href="index.html#equipo" class="navbar-link" data-nav-link>Equipo</a>
               </li>
 
               <li>
-                <a href="#material" class="navbar-link" data-nav-link>Material</a>
+                <a href="index.html#material" class="navbar-link" data-nav-link>Material</a>
               </li>
 
               <li>
-                <a href="#servicios" class="navbar-link" data-nav-link>Servicios</a>
+                <a href="index.html#servicios" class="navbar-link" data-nav-link>Métodos</a>
                 <ul class="submenu navbar-link">
-                    <li><a class="hover-text" href="solucionadorSNH.html">Solucionador de SNH</a></li>
-                    <li><a class="hover-text" href="problemasCI.html">Problemas EDO de CI</a></li>
-                    <li><a class="hover-text" href="#">Teoría y fórmulas</a></li>
-                    <li><a class="hover-text" href="#">Ejercicios para el cuaderno</a></li>
+                  <li><a class="hover-text" href="solucionadorSNH.html">SistemaNH 2X2</a></li>
+                  <li><a class="hover-text" href="problemasCI.html">Problemas de CI</a></li>
+                  <li><a class="hover-text" href="#">Teoría y fórmulas</a></li>
+                  <li><a class="hover-text" href="#">Ejercicios para el cuaderno</a></li>
                 </ul>
-            </li>
+              </li>
 
             </ul>
           </div>
@@ -141,27 +137,29 @@
 
         <div class="header-bottom-actions">
 
-          <button class="header-bottom-actions-btn" aria-label="Search">
+          <input class="input-problema" style="width: 10em;" type="text" id="searchInput"
+            placeholder="Palabras clave...">
+          <button class="header-bottom-actions-btn" aria-label="Search" onclick="searchOnPage()">
             <ion-icon name="search-outline"></ion-icon>
-
             <span>Search</span>
           </button>
 
-          <button class="header-bottom-actions-btn" aria-label="Profile">
+          <!-- <button class="header-bottom-actions-btn" aria-label="Profile">
             <ion-icon name="person-outline"></ion-icon>
 
             <span>Profile</span>
-          </button>
+          </button> -->
 
           <button class="header-bottom-actions-btn" aria-label="Cart">
-            <ion-icon name="code-outline"></ion-icon>
-
+            <a href="https://github.com/Boostrap-Proyects/Ecuaciones-Diferenciales" target="_blank">
+              <ion-icon name="code-outline"></ion-icon>
+            </a>
             <span>Code</span>
           </button>
+          </a>
 
           <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
             <ion-icon name="menu-outline"></ion-icon>
-
             <span>Menu</span>
           </button>
 
@@ -171,787 +169,819 @@
     </div>
   </header>
 
+  <div id="contentArea">
+    <main>
+      <article>
 
-  <main>
-    <article>
+        <!-- #HERO -->
+        <section class="hero">
+          <div class="container">
 
-      <!-- #HERO -->
-      <section class="hero">
-        <div class="container">
+            <div class="hero-content">
 
-          <div class="hero-content">
+              <p class="hero-subtitle">
+                <ion-icon name="home"></ion-icon>
 
-            <p class="hero-subtitle">
-              <ion-icon name="home"></ion-icon>
+                <span>Facultad de Ingeniería y Tecnología</span>
+              </p>
 
-              <span>Facultad de Ingeniería y Telecomunicaciones</span>
-            </p>
+              <h2 class="h1 hero-title">Ecuaciones Diferenciales</h2>
 
-            <h2 class="h1 hero-title">Ecuaciones Diferenciales</h2>
+              <p class="hero-text">
+                Una aplicación web para la resolución y enseñanza de los métodos derivados de las ecuaciones
+                diferenciales.
+              </p>
+              <a href="https://drive.google.com/file/d/1QbIESTbWRLtHzaz6-uy7yKreukNdUZH8/view?usp=sharing"
+                target="_blank">
+                <button class="btn">Ver artículo</button>
+              </a>
 
-            <p class="hero-text">
-              Aplicación unificadora de los temas sobre ecuaciones diferenciales para su resolución y estudio.
-            </p>
+            </div>
 
-            <button class="btn">Ir a documento</button>
+            <figure class="hero-banner">
+              <img class="h-50" src="./assets/images/hero-banner.png" alt="App logo">
+            </figure>
 
           </div>
-
-          <figure class="hero-banner">
-            <img class="h-50" src="./assets/images/hero-banner.png" alt="App logo">
-          </figure>
-
-        </div>
-      </section>
+        </section>
 
 
-      <!-- #INICIO -->
-      <section class="about" id="inicio">
-        <div class="container">
+        <!-- #INICIO -->
+        <section class="about" id="inicio">
+          <div class="container">
 
-          <figure class="about-banner">
-            <img src="./assets/images/acerca-banner.jpg" alt="Library">
-          </figure>
+            <figure class="about-banner">
+              <img src="./assets/images/acerca-banner.jpg" alt="Library">
+            </figure>
 
-          <div class="about-content">
+            <div class="about-content">
 
-            <p class="section-subtitle">Acerca</p>
+              <p class="section-subtitle">Acerca</p>
 
-            <h2 class="h2 section-title">Una biblioteca sobre la variedad de ecuaciones</h2>
+              <h2 class="h2 section-title">La creación del proyecto</h2>
 
-            <p class="about-text">
-              Partiendo de los 2 tipos de ecuaciones que existen se desprenden 4 modelos matemáticos, cada uno con sus
-              respectivos métodos para solucionarse.
-              En esta aplicación se plantean involucrar a todos los métodos existentes, y por haber.
-            </p>
+              <p class="about-text">
+                La razón de crear esta aplicación web es para simplificar la resolución y el aprendizaje de los métodos
+                que tienen las ecuaciones diferenciales.
+                El programa busca proporcionar herramientas prácticas y accesibles para estudiantes y profesionales,
+                permitiéndoles comprender y resolver problemas de manera eficiente.
+                Mediante la estructura de página que tiene cada método se pretende que el tema quede comprendido
+                completamente para el usuario, es por eso que se optó por 3 secciones:
+              <ul class="about-text flechita-lista" style="margin-top: -10px;">
+                <li style="margin-bottom: 10px;">Redacción de un resumen del tema presentando los conceptos y fórmulas
+                  principales, además de un video del profesor resolviendo un problema mientras lo va explicando.</li>
+                <li style="margin-bottom: 10px;">Imagen de un problema resuelto hecho en libreta</li>
+                <li>Un problema interactivo con entrada de datos para que el usuario lo resuelva, calificando sus
+                  respuestas por cada paso.</li>
+              </ul>
+              </p>
 
-            <ul class="about-list">
+              <h2 class="h3 section-title" style="margin-top: -10px;">Objetivos:</h2>
+              <ul class="about-list">
 
-              <li class="about-item">
-                <div class="about-item-icon">
-                  <ion-icon name="earth-outline"></ion-icon>
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <p class="about-item-text">Ser de fácil uso para el usuario</p>
+                </li>
+
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <p class="about-item-text">Obtener entendimiento del tema</p>
+                </li>
+
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <p class="about-item-text">Comprensión de los problemas de aplicación</p>
+                </li>
+
+                <li class="about-item">
+                  <div class="about-item-icon">
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                  <p class="about-item-text">Comprensión de la solución del problema</p>
+                </li>
+
+              </ul>
+
+              <p class="callout">
+                “No hay menos belleza en una exacta ecuación que en una frase precisa.
+                Pero cada ciencia tiene su propio lenguaje estético”. — Marc Bloch
+              </p>
+
+              <!-- <a href="#service" class="btn">Referencias</a> -->
+
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- #EQUIPO -->
+        <section class="service" id="equipo">
+          <div class="container">
+
+            <p class="section-subtitle">Equipo</p>
+
+            <h2 class="h2 section-title">Integrantes del programa</h2>
+
+            <ul class="service-list">
+
+              <li>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/jose.png" alt="Service icon">
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Jose Mendoza</a>
+                  </h3>
+
+                  <p class="card-text" style="text-decoration: underline">
+                    Docente en matemáticas y estadística
+                  </p>
+                  <p class="card-text">
+                    Lider de la investigación, proporcionando la solución a diversos métodos de EDO, y creador de
+                    tutoriales matemáticas.
+                  </p>
+
+                  <a href="#" class="card-link">
+                    <span>Leer más...</span>
+
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </a>
+
                 </div>
-
-                <p class="about-item-text">Abierta a todo el público</p>
               </li>
 
-              <li class="about-item">
-                <div class="about-item-icon">
-                  <ion-icon name="easel-outline"></ion-icon>
-                </div>
+              <li>
+                <div class="service-card">
 
-                <p class="about-item-text">Herramienta de aprendisaje</p>
+                  <div class="card-icon">
+                    <img src="./assets/images/leo.png" alt="Service icon">
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Leonardo Acosta</a>
+                  </h3>
+
+                  <p class="card-text" style="text-decoration: underline">
+                    Estudiante de Ingeniería en Sistemas
+                  </p>
+                  <p class="card-text">
+                    Desarrollador de la página web, proporcionando diseño y lógica para la resolución de problemas de
+                    EDO.
+                  </p>
+
+                  <a href="#" class="card-link">
+                    <span>Leer más...</span>
+
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </a>
+
+                </div>
               </li>
 
-              <li class="about-item">
-                <div class="about-item-icon">
-                  <ion-icon name="speedometer-outline"></ion-icon>
+              <li>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <img src="./assets/images/alan.png" alt="Service icon">
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Alan Chablé</a>
+                  </h3>
+
+                  <p class="card-text" style="text-decoration: underline">
+                    Estudiante de Ingeniería en Sistemas
+                  </p>
+                  <p class="card-text">
+                    Redactor del artículo de investigación durante un semestre, solucionando problemas aplicados de EDO
+                    para libreta.
+                  </p>
+
+                  <a href="#" class="card-link">
+                    <span>Leer más...</span>
+
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </a>
+
                 </div>
-
-                <p class="about-item-text">Respuestas rapidas</p>
-              </li>
-
-              <li class="about-item">
-                <div class="about-item-icon">
-                  <ion-icon name="hammer-outline"></ion-icon>
-                </div>
-
-                <p class="about-item-text">Aplicación en mejora</p>
               </li>
 
             </ul>
 
-            <p class="callout">
-              “No hay menos belleza en una exacta ecuación q en una frase precisa.
-              Pero cada ciencia tiene su propio lenguaje estético”. — Marc Bloch
-            </p>
+          </div>
+        </section>
 
-            <a href="#service" class="btn">Referencias</a>
+
+        <!-- #MATERIAL -->
+        <section class="property" id="material">
+          <div class="container">
+
+            <p class="section-subtitle">Material</p>
+
+            <h2 class="h2 section-title">Videos educativos</h2>
+
+            <ul class="property-list has-scrollbar">
+
+              <li>
+                <div class="property-card">
+
+                  <figure>
+                    <a href="#">
+                      <div class="video-container">
+                        <iframe width="560" height="315"
+                          src="https://www.youtube.com/embed/UcYkkSozxBo?si=ZK_JqSNl3FjChIfI" frameborder="0"
+                          allowfullscreen></iframe>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">
+                      <a href="https://www.youtube.com/embed/UcYkkSozxBo?si=ZK_JqSNl3FjChIfI" target="_blank">Solución
+                        de un sistema de ecuaciones diferenciales de 2x2</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Descubre la solución de sistemas de ecuaciones diferenciales 2x2 sin la variable temporal 't' en
+                      este breve video educativo.
+                      Simplificamos el proceso paso a paso, proporcionando una comprensión clara y directa de este tema
+                      matemático.
+                    </p>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="card-author">
+
+                      <figure class="author-avatar">
+                        <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                      </figure>
+
+                      <div>
+                        <p class="author-name">
+                          <a href="https://www.youtube.com/@Ecuaciones_Diferenciales/playlists"
+                            target="_blank">Ecuaciones Diferenciales</a>
+                        </p>
+                        <p class="author-title">Tutoriales precisos para estudiantes de ingeniería
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="card-footer-actions">
+
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                      </button>
+
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="thumbs-up-outline"></ion-icon>
+                      </button>
+
+                      <div class="publish-date">
+                        <div style="display: flex; gap: 5px;">
+                          <ion-icon name="calendar"></ion-icon>
+                          <time datetime="2024-18-02">feb 18, 2024</time>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="property-card">
+
+                  <figure>
+                    <a href="#">
+                      <div class="video-container">
+                        <iframe width="560" height="315"
+                          src="https://www.youtube.com/embed/-_TXQAzK7aQ?si=fJbV3VEGWxauKgCr" frameborder="0"
+                          allowfullscreen></iframe>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">
+                      <a href="https://www.youtube.com/embed/-_TXQAzK7aQ?si=fJbV3VEGWxauKgCr" target="_blank">Problema
+                        de crecimiento poblacional de condiciones iniciales</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Comenzamos por expresar la tasa de cambio de la población en función al tiempo mediante una
+                      ecuación diferencial.
+                      Luego utilizamos las condiciones iniciales proporcionadas para determinar las constantes y la
+                      solución particular.
+                    </p>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="card-author">
+
+                      <figure class="author-avatar">
+                        <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                      </figure>
+
+                      <div>
+                        <p class="author-name">
+                          <a href="https://www.youtube.com/@Ecuaciones_Diferenciales/playlists"
+                            target="_blank">Ecuaciones Diferenciales</a>
+                        </p>
+                        <p class="author-title">Tutoriales precisos para estudiantes de ingeniería
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="card-footer-actions">
+
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                      </button>
+
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="thumbs-up-outline"></ion-icon>
+                      </button>
+
+                      <div class="publish-date">
+                        <div style="display: flex; gap: 5px;">
+                          <ion-icon name="calendar"></ion-icon>
+                          <time datetime="2024-22-02">feb 22, 2024</time>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="property-card">
+
+                  <figure>
+                    <a href="#">
+                      <div class="video-container">
+                        <iframe width="560" height="315"
+                          src="https://www.youtube.com/embed/wYmDawmaVMo?si=TVu-zz0W1VDddt0X" frameborder="0"
+                          allowfullscreen></iframe>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">
+                      <a href="https://www.youtube.com/embed/wYmDawmaVMo?si=TVu-zz0W1VDddt0X" target="_blank">Problema
+                        de interés compuesto de condiciones iniciales</a>
+                    </h3>
+
+                    <p class="card-text">
+                      En este video calculamos el monto acumulado después de un cierto período de tiempo, tomando en
+                      cuenta la tasa de interés compuesto y las condiciones iniciales.
+                      La fórmula clave para este proceso es: A(t) = Ce^rt
+                    </p>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="card-author">
+
+                      <figure class="author-avatar">
+                        <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                      </figure>
+
+                      <div>
+                        <p class="author-name">
+                          <a href="https://www.youtube.com/@Ecuaciones_Diferenciales/playlists"
+                            target="_blank">Ecuaciones Diferenciales</a>
+                        </p>
+                        <p class="author-title">Tutoriales precisos para estudiantes de ingeniería
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="card-footer-actions">
+
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                      </button>
+
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="thumbs-up-outline"></ion-icon>
+                      </button>
+
+                      <div class="publish-date">
+                        <div style="display: flex; gap: 5px;">
+                          <ion-icon name="calendar"></ion-icon>
+                          <time datetime="2024-25-02">feb 25, 2024</time>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="property-card">
+
+                  <figure>
+                    <a href="#">
+                      <div class="video-container">
+                        <iframe width="560" height="315"
+                          src="https://www.youtube.com/embed/0ccX_TIFiSA?si=GqoQAdmSl_Rxqqm5" frameborder="0"
+                          allowfullscreen></iframe>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">
+                      <a href="https://www.youtube.com/embed/0ccX_TIFiSA?si=GqoQAdmSl_Rxqqm5" target="_blank">Problema
+                        de decaimiento radioactivo de condiciones iniciales</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Comenzamos por formular el modelo con dy/dt = -k⋅y, luego se incorporan las condiciones iniciales
+                      en el t=0. Se resuelve la ecuación diferencial
+                      determinando los parámetros e interpretando los respecto a la constante de decaimiento k
+                    </p>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="card-author">
+
+                      <figure class="author-avatar">
+                        <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                      </figure>
+
+                      <div>
+                        <p class="author-name">
+                          <a href="https://www.youtube.com/@Ecuaciones_Diferenciales/playlists"
+                            target="_blank">Ecuaciones Diferenciales</a>
+                        </p>
+                        <p class="author-title">Tutoriales precisos para estudiantes de ingeniería
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="card-footer-actions">
+
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                      </button>
+
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="thumbs-up-outline"></ion-icon>
+                      </button>
+
+                      <div class="publish-date">
+                        <div style="display: flex; gap: 5px;">
+                          <ion-icon name="calendar"></ion-icon>
+                          <time datetime="2024-26-02">feb 26, 2024</time>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </section>
+
+
+        <!-- #SERVICIOS -->
+        <section class="features" id="servicios">
+          <div class="container">
+
+            <p class="section-subtitle">Métodos</p>
+
+            <h2 class="h2 section-title">Programas de EDO interactivos</h2>
+
+            <ul class="features-list">
+
+              <li>
+                <a href="solucionadorSNH.html" class="features-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="calculator-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="card-title">Sistema no homogeneo 2X2</h3>
+
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+
+                </a>
+              </li>
+
+              <li>
+                <a href="problemasCI.html" class="features-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="book-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="card-title">Problemas de condiciones iniciales</h3>
+
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="features-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="flask-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="card-title">Galería de teorías/fórmulas</h3>
+
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="features-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="library-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="card-title">Ejercicios para el cuaderno</h3>
+
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="features-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="information-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="card-title">Ecuación de Bernoulli</h3>
+
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="features-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="git-network-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="card-title">Ecuación de variables separables</h3>
+
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="features-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="disc-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="card-title">Ecuación exacta</h3>
+
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="features-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="resize-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="card-title">Ecuación de Riccati</h3>
+
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+
+    <!-- #FOOTER -->
+    <footer class="footer">
+
+      <div class="footer-top">
+        <div class="container">
+
+          <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+              <img src="./assets/images/logo-bottom.png" alt="logo-fitec">
+            </a>
+
+            <ul class="contact-list">
+
+              <li>
+                <a href="https://www.google.com/maps/place/Montemorelos+University/@25.1925767,-99.8481377,17z/data=!4m6!3m5!1s0x867cd6e2bd190e2f:0x8a690c81c38aa44!8m2!3d25.1925719!4d-99.8455628!16s%2Fm%2F03qjh1n?entry=ttu"
+                  target="_blank" class="contact-link">
+                  <ion-icon name="location-outline"></ion-icon>
+
+                  <span>Av. Libertad 1300 Pte, Matamoros, 67515 Montemorelos, N.L.</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:+0123456789" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <span>+(826) 106 94 15</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="mailto:megamergezx@gmail.com" target="_blank" class="contact-link">
+                  <ion-icon name="mail-outline"></ion-icon>
+
+                  <span>megamergezx@gmail.com</span>
+                </a>
+              </li>
+
+            </ul>
+
+            <ul class="social-list">
+
+              <li>
+                <a href="https://www.facebook.com/Facultad.de.Ingenieria.y.Tecnologia" target="_blank"
+                  class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://twitter.com/soyfitec" target="_blank" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.youtube.com/@Ecuaciones_Diferenciales" target="_blank" class="social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-link-box">
+
+            <ul class="footer-list">
+
+              <li>
+                <p class="footer-list-title">Navegación</p>
+              </li>
+
+              <li>
+                <a href="index.html#inicio" class="footer-link">Inicio</a>
+              </li>
+
+              <li>
+                <a href="index.html#equipo" class="footer-link">Equipo</a>
+              </li>
+
+              <li>
+                <a href="index.html#material" class="footer-link">Material</a>
+              </li>
+
+              <li>
+                <a href="index.html#servicios" class="footer-link">Métodos</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-list">
+
+              <li>
+                <p class="footer-list-title">Proyecto</p>
+              </li>
+
+              <li>
+                <a href="https://drive.google.com/file/d/1QbIESTbWRLtHzaz6-uy7yKreukNdUZH8/view?usp=sharing"
+                  target="_blank" class="footer-link">Artículo</a>
+              </li>
+
+              <li>
+                <a href="https://github.com/Boostrap-Proyects/Ecuaciones-Diferenciales" target="_blank"
+                  class="footer-link">Repositorio</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Galeria</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Referencias</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-list">
+
+              <li>
+                <p class="footer-list-title">Utilerias</p>
+              </li>
+
+              <li>
+                <a href="https://www.mathwhiteboard.com/whiteboard/?d=LZICVR" target="_blank"
+                  class="footer-link">Pizarron virtual</a>
+              </li>
+
+              <li>
+                <a href="https://pinetools.com/colorize-image" target="_blank" class="footer-link">Overlay de
+                  imágenes</a>
+              </li>
+
+              <li>
+                <a href="https://ionic.io/ionicons" target="_blank" class="footer-link">Íconos boostrap</a>
+              </li>
+
+              <li>
+                <a href="https://cursa.ihmc.us/rid=1TYTZJZ45-1WHJXTD-3MZZ/1TYTMX98QIP2CFMXI4XJIimage?rid=1TYTZJZ45-1WHJXTD-3MZZ&partName=htmljpeg"
+                  target="_blank" class="footer-link">Categorias de EcuacionesD</a>
+              </li>
+
+            </ul>
 
           </div>
 
         </div>
-      </section>
+      </div>
 
-
-      <!-- #EQUIPO -->
-      <section class="service" id="equipo">
+      <div class="footer-bottom">
         <div class="container">
 
-          <p class="section-subtitle">Equipo</p>
-
-          <h2 class="h2 section-title">Creadores del poyecto</h2>
-
-          <ul class="service-list">
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/jose.png" alt="Service icon">
-                </div>
-
-                <h3 class="h3 card-title">
-                  <a href="#">Jose Mendoza</a>
-                </h3>
-
-                <p class="card-text" style="text-decoration: underline">
-                  Docente en matemáticas y estadística
-                </p>
-                <p class="card-text">
-                  Lider de la investigación y directivo del contenido y procedimientos de la páginaWeb
-                </p>
-
-                <a href="#" class="card-link">
-                  <span>Leer más...</span>
-
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/leo.png" alt="Service icon">
-                </div>
-
-                <h3 class="h3 card-title">
-                  <a href="#">Leonardo Acosta</a>
-                </h3>
-
-                <p class="card-text" style="text-decoration: underline">
-                  Estudiante de Ingeniería en Sistemas
-                </p>
-                <p class="card-text">
-                  Desarrollador para la solución de las EDO no homogeneas parte práctica
-                </p>
-
-                <a href="#" class="card-link">
-                  <span>Leer más...</span>
-
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/alan.png" alt="Service icon">
-                </div>
-
-                <h3 class="h3 card-title">
-                  <a href="#">Alan Chablé</a>
-                </h3>
-
-                <p class="card-text" style="text-decoration: underline">
-                  Estudiante de Ingeniería en Sistemas
-                </p>
-                <p class="card-text">
-                  Desarrollador para la solución de las EDO no homogeneas parte teórica
-                </p>
-
-                <a href="#" class="card-link">
-                  <span>Leer más...</span>
-
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-      <!-- #MATERIAL -->
-      <section class="property" id="material">
-        <div class="container">
-
-          <p class="section-subtitle">Material</p>
-
-          <h2 class="h2 section-title">Artículos relacionados</h2>
-
-          <ul class="property-list has-scrollbar">
-
-            <li>
-              <div class="property-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/material-size.jpg" alt="Video Youtube" class="w-100">
-                  </a>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Método del polinomio característico</a>
-                  </h3>
-
-                  <p class="card-text">
-                    En este video se enfoca en resolver la parte homogenea Xc por medio del uso de matrices y substacciones de lambda.
-                    También se explica la utilidad de sus valores para la transformación lineal
-                  </p>
-
-                </div>
-
-                <div class="card-footer">
-
-                  <div class="card-author">
-
-                    <figure class="author-avatar">
-                      <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
-                    </figure>
-
-                    <div>
-                      <p class="author-name">
-                        <a href="#">William Seklo</a>
-                      </p>
-                      <p class="author-title">Estate Agents</p>
-                    </div>
-
-                  </div>
-
-                  <div class="card-footer-actions">
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="play-circle-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="thumbs-up-outline"></ion-icon>
-                    </button>
-
-                    <div class="publish-date">
-                      <ion-icon name="calendar"></ion-icon>
-                      <time datetime="2022-27-04">Oct 10, 2023</time>
-                    </div> 
-
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="property-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/material-size.jpg" alt="Video Youtube" class="w-100">
-                  </a>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Nuevo método para la parte no homogenea Xp = (a2, b2)t + (a1, b1)</a>
-                  </h3>
-
-                  <p class="card-text">
-                    En este video se desarrola la formula clásica Xp = (a2, b2)t + (a1, b1) y como se desarrollo el nuevo método por Jose Mendoza
-                  </p>
-
-                </div>
-
-                <div class="card-footer">
-
-                  <div class="card-author">
-
-                    <figure class="author-avatar">
-                      <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
-                    </figure>
-
-                    <div>
-                      <p class="author-name">
-                        <a href="#">William Seklo</a>
-                      </p>
-                      <p class="author-title">Estate Agents</p>
-                    </div>
-
-                  </div>
-
-                  <div class="card-footer-actions">
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="play-circle-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="thumbs-up-outline"></ion-icon>
-                    </button>
-
-                    <div class="publish-date">
-                      <ion-icon name="calendar"></ion-icon>
-                      <time datetime="2022-27-04">Oct 10, 2023</time>
-                    </div> 
-
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="property-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/material-size.jpg" alt="Video Youtube" class="w-100">
-                  </a>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Obtención de a1 y b1 por medio de matrices</a>
-                  </h3>
-
-                  <p class="card-text">
-                    En este video se evalua sistma y su valor t. 
-                    En el caso donde exista valor t se utiliza la matriz P obteniendo a2 y b2.
-                    En el caso donde no exista valor t se pasa directo a la matriz Q obteniendo a1 y b1.
-                  </p>
-
-                </div>
-
-                <div class="card-footer">
-
-                  <div class="card-author">
-
-                    <figure class="author-avatar">
-                      <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
-                    </figure>
-
-                    <div>
-                      <p class="author-name">
-                        <a href="#">William Seklo</a>
-                      </p>
-                      <p class="author-title">Estate Agents</p>
-                    </div>
-
-                  </div>
-
-                  <div class="card-footer-actions">
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="play-circle-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="thumbs-up-outline"></ion-icon>
-                    </button>
-
-                    <div class="publish-date">
-                      <ion-icon name="calendar"></ion-icon>
-                      <time datetime="2022-27-04">Oct 10, 2023</time>
-                    </div> 
-
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="property-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/material-size.jpg" alt="Video Youtube" class="w-100">
-                  </a>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Las reglas con los valores Lambda (λ1 λ2)</a>
-                  </h3>
-
-                  <p class="card-text">
-                    En este video se explican los 3 posibles casos para los valores λ1 y λ2.
-                    Las expresiones o términos lambda, se escriben utilizando 3 elementos básicos. 3 elementos: variables, funciones, y aplicaciones.
-                  </p>
-
-                </div>
-
-                <div class="card-footer">
-
-                  <div class="card-author">
-
-                    <figure class="author-avatar">
-                      <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
-                    </figure>
-
-                    <div>
-                      <p class="author-name">
-                        <a href="#">William Seklo</a>
-                      </p>
-                      <p class="author-title">Estate Agents</p>
-                    </div>
-
-                  </div>
-
-                  <div class="card-footer-actions">
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="play-circle-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="thumbs-up-outline"></ion-icon>
-                    </button>
-
-                    <div class="publish-date">
-                      <ion-icon name="calendar"></ion-icon>
-                      <time datetime="2022-27-04">Oct 10, 2023</time>
-                    </div> 
-
-                  </div>
-                </div>
-              </div>
-            </li>
-
-          </ul>
-        </div>
-      </section>
-
-
-      <!-- #SERVICIOS -->
-      <section class="features" id="servicios">
-        <div class="container">
-
-          <p class="section-subtitle">Servicios</p>
-
-          <h2 class="h2 section-title">Programas prácticos y teóricos</h2>
-
-          <ul class="features-list">
-
-            <li>
-              <a href="solucionadorSNH.html" class="features-card">
-
-                <div class="card-icon">
-                  <ion-icon name="calculator-outline"></ion-icon>
-                </div>
-
-                <h3 class="card-title">Solucionador de sistema no homogeneo</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="problemasCI.html" class="features-card">
-
-                <div class="card-icon">
-                  <ion-icon name="book-outline"></ion-icon>
-                </div>
-
-                <h3 class="card-title">Problemas EDO de condiciones iniciales</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="features-card">
-
-                <div class="card-icon">
-                  <ion-icon name="flask-outline"></ion-icon>
-                </div>
-
-                <h3 class="card-title">Teoría y fórmulas</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="features-card">
-
-                <div class="card-icon">
-                  <ion-icon name="library-outline"></ion-icon>
-                </div>
-
-                <h3 class="card-title">Ejercicios prácticos para el cuaderno</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="features-card">
-
-                <div class="card-icon">
-                  <ion-icon name="information-outline"></ion-icon>
-                </div>
-
-                <h3 class="card-title">Ecuación de Bernoulli</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="features-card">
-
-                <div class="card-icon">
-                  <ion-icon name="git-network-outline"></ion-icon>
-                </div>
-
-                <h3 class="card-title">Ecuación de variables separables</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="features-card">
-
-                <div class="card-icon">
-                  <ion-icon name="disc-outline"></ion-icon>
-                </div>
-
-                <h3 class="card-title">Ecuación exacta</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="features-card">
-
-                <div class="card-icon">
-                  <ion-icon name="resize-outline"></ion-icon>
-                </div>
-
-                <h3 class="card-title">Ecuación de Riccati</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-    </article>
-  </main>
-
-
-  <!-- #FOOTER -->
-  <footer class="footer">
-
-    <div class="footer-top">
-      <div class="container">
-
-        <div class="footer-brand">
-
-          <a href="#" class="logo">
-            <img src="./assets/images/logo-bottom.png" alt="logo-fitec">
-          </a>
-
-          <p class="section-text">
-            Aplicación unificadora de los temas sobre ecuaciones diferenciales para su resolución y estudio.
+          <p class="copyright">
+            Ecuaciones Diferenciales
+            &copy; 2024 <a href="#"></a>
           </p>
 
-          <ul class="contact-list">
-
-            <li>
-              <a href="https://www.google.com/maps/place/Montemorelos+University/@25.1925767,-99.8481377,17z/data=!4m6!3m5!1s0x867cd6e2bd190e2f:0x8a690c81c38aa44!8m2!3d25.1925719!4d-99.8455628!16s%2Fm%2F03qjh1n?entry=ttu"
-                target="_blank" class="contact-link">
-                <ion-icon name="location-outline"></ion-icon>
-
-                <address>Av. Libertad 1300 Pte, Matamoros, 67515 Montemorelos, N.L.</address>
-              </a>
-            </li>
-
-            <li>
-              <a href="tel:+0123456789" class="contact-link">
-                <ion-icon name="call-outline"></ion-icon>
-
-                <span>+(826) 106 94 15</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="mailto:lacosta2712@gmail.com" target="_blank" class="contact-link">
-                <ion-icon name="mail-outline"></ion-icon>
-
-                <span>lacosta2712@gmail.com</span>
-              </a>
-            </li>
-
-          </ul>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
         </div>
-
-        <div class="footer-link-box">
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Extras</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Cosmovisión</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Trabajos</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Galeria</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Localización</a>
-            </li>
-
-          </ul>
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Proyecto</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Repositorio</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Solicitud</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Requisitos</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Cursos</a>
-            </li>
-
-          </ul>
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Preferencias de Usuario</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Terminos & Condiciones</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Acceso Admin</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Themes</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Responsive</a>
-            </li>
-
-          </ul>
-
-        </div>
-
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <div class="container">
-
-        <p class="copyright">
-          &copy; 2023 - <a href="#">Ecuaciones Diferenciales</a>. Facultad de Ingenieria y Telecomunicaciones
-        </p>
-
-      </div>
-    </div>
-
-  </footer>
+    </footer>
 
 
-  <!-- #SCRIPTS -->
-  <script src="./assets/js/script.js"></script>
+    <!-- #SCRIPTS -->
+    <script src="./assets/js/script.js"></script>
 
 
-  <!-- #ICONS -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    <!-- #ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </div>
 </body>
 
 </html>

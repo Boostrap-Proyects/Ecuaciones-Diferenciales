@@ -1698,6 +1698,7 @@ button, a { transition: var(--transition); }
   justify-content: left;
   align-items: left;
   height: 100%;
+  margin-bottom: 20px;
 }
 
 .left-image-poli, .right-image-poli {
@@ -1885,4 +1886,76 @@ li:hover .submenu {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.flechita-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flechita-lista li {
+  position: relative;
+  padding-left: 20px; /* Espacio para la flecha */
+}
+
+.flechita-lista li::before {
+  content: "➔"; /* Código unicode para una flecha hacia la derecha */
+  position: absolute;
+  left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.container-sistema2x2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.content-container {
+  text-align: right;
+  padding: 3px;
+}
+
+.box-sistema {
+  margin-bottom: 10px;
+}
+
+.XY{
+  font-size: 1em;
+  height: 1.5em; 
+  width: 7em;
+  display: inline-block;
+  padding: 3px;
+  box-sizing: border-box;
+}
+.XY-label{
+    font-size: 1em;
+    height: 1.5em;
+}
+
+
+.container-polinomio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.XcXp-label{
+  font-size: 1.5em;
+  height: 2em;
 }

@@ -19,7 +19,7 @@ function paso1Colecta() {
         mensajes.push("* El tiempo es incorrecto");
     }
     // Validar las cantidades
-    if (cantidad1 !== 30) {
+    if (cantidad1 !== 27) {
         mensajes.push("* La cantidad es incorrecta");
     }
     // Validar las potencias
@@ -27,13 +27,13 @@ function paso1Colecta() {
         mensajes.push("* La potencia t es incorrecta");
     }
     // Validar las potencias
-    if (interes !== 0.05) {
+    if (interes !== 0.075) {
         mensajes.push("* El interes es inconrrecto");
     }
     // Todo correcto
     if (mensajes.length === 0) {
         mensajes.push("Correcto!, ahora se sustituyen los valores en la solución. Favor de construir la fórmula para el pago:",true);
-        document.getElementById("cIn").textContent = "c = 30";
+        document.getElementById("cIn").textContent = "c = ¢27";
     }
     return mensajes;
 }
@@ -86,17 +86,17 @@ function paso2Colecta() {
         mensajes.push("* Favor de llenar todos los campos");
     }
     // Validar la cantidad
-    if (cantidad2 !== 30) {
+    if (cantidad2 !== 27) {
         mensajes.push("* La cantidad es icorrecta");
     }
     // Validar el interes
-    if (interes2 !== 0.05) {
+    if (interes2 !== 0.075) {
         mensajes.push("* El interes es icorrecto");
     }
     // Todo correcto
     if (mensajes.length === 0) {
         mensajes.push("Correcto!, esta fórmula nos ayudara a encontrar el pago total por multa. Favor de utilizar la fórmula respecto a t:",true); 
-        var formulaAt = "<strong>A(t) = 30e<sup>0.05t</sup></strong>";
+        var formulaAt = "<strong>A(t) = 27e<sup>0.075t</sup></strong>";
         document.getElementById("formulaAt").innerHTML = formulaAt;
     }
     return mensajes;
@@ -140,33 +140,23 @@ function paso2Ejecucion() {
 
 function paso3Colecta() {
     const tiempoPasado1 = parseFloat(document.getElementById('tiempoPasado1').value);
-    const cantidad3 = parseFloat(document.getElementById('cantidad3').value);
-    const interes3 = parseFloat(document.getElementById('interes3').value);
     const tiempoPasado2 = parseFloat(document.getElementById('tiempoPasado2').value);
 
     const mensajes = [];
     //Validar nulos
     if (
-        isNaN(tiempoPasado1) || isNaN(cantidad3) || isNaN(interes3) || isNaN(tiempoPasado2)
+        isNaN(tiempoPasado1) || isNaN(tiempoPasado2)
     ) {
         mensajes.push("* Favor de llenar todos los campos");
     }
     // Validar tiempos
-    if (tiempoPasado1 !== 100 || tiempoPasado2 !== 100) {
+    if (tiempoPasado1 !== 72 || tiempoPasado2 !== 72) {
         mensajes.push("* El tiempo es incorrecto");
-    }
-    // Validar cantidad
-    if (cantidad3 !== 30) {
-        mensajes.push("* La cantidad es incorrecta");
-    }
-    // Validar interes
-    if (interes3 !== 0.05) {
-        mensajes.push("* El interes es incorrecto");
     }
     // Todo correcto
     if (mensajes.length === 0) {
-        mensajes.push("Correcto!, El pago despúes de 100 años sería ¢4452.39  ∴  USD$44.5239",true);
-        document.getElementById("centavos").textContent = " = ¢4452.39 centavos";
+        mensajes.push("Correcto!, El pago despúes de 72 años sería ¢5977.97  ∴  $59.77",true);
+        document.getElementById("centavos").textContent = " = ¢5977.97";
     }
     return mensajes;
 }

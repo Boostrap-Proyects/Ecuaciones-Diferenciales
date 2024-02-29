@@ -1,44 +1,73 @@
-var valoresX;
-var valoresY;
-var ecuacionPolinomio;
-var ecuacionX;
-var ecuacionY;
+var A1,A2,A4,B1,B2,B4;
+var λ1,λ2;
+var a1,b1;
 
-var a1_x;
-var λ1_x;
-var λ2_x;
+const error = document.querySelector('.error')
+const correct = document.querySelector('.correct')
 
-var b1_y;
-var λ1_y;
-var λ2_y;
+async function paso1Ejecucion() {
+	const X = await sacarConstantes(document.getElementById('X').value.toUpperCase(), 'x');
+	const Y = await sacarConstantes(document.getElementById('Y').value.toUpperCase(), 'y');
+	A1=X.A1; A2=X.A2; A4=X.A4;  B1=Y.B1; B2=Y.B2; B4=Y.B4;
 
-var steps = [];
-const enviar = document.getElementById("enviar");
+	document.getElementById("A1-λ").textContent = A1+" - λ";
+	document.getElementById("A2").textContent = A2;
 
-enviar.addEventListener("click", async function () {
-	valoresX = await sacarConstantes(inputX.value, 'x');
-	valoresY = await sacarConstantes(inputY.value, 'y');
-	ecuacionX = "X'=" +inputX.value;
-	ecuacionY = "Y'=" +inputY.value;
+	document.getElementById("B1").textContent = B1;
+	document.getElementById("B2-λ").textContent = B2+" - λ";
+	document.getElementById("MatrizProduct").textContent = "(" + X.A1 + "-λ" + ")" + "(" + Y.B2 + "-λ" + ")" + " - " + "(" + Y.B1 + "*" + X.A2 + ") = 0";
 
-	document.getElementById("A1").textContent = valoresX.A1;
-	document.getElementById("A2").textContent = valoresX.A2;
-	document.getElementById("A4").textContent = valoresX.A4;
+	const show2nd = document.getElementById('show2nd');
+	show2nd.style.display = "block";
+}
 
-	document.getElementById("B1").textContent = valoresY.B1;
-	document.getElementById("B2").textContent = valoresY.B2;
-	document.getElementById("B4").textContent = valoresY.B4;
+function paso2Ejecucion() {
+	var ansDiv = document.getElementById("ansDiv");
+	var MatrizProduct = document.getElementById("MatrizProduct");
+    MatrizProduct = MatrizProduct.textContent || MatrizProduct.innerText;
 
-	document.getElementById("AA1").textContent = valoresX.A1 + " - λ";
-	document.getElementById("AA2").textContent = valoresX.A2;
-	document.getElementById("BB1").textContent = valoresY.B1;
-	document.getElementById("BB2").textContent = valoresY.B2 + " - λ";
+	var res = preSimplify(MatrizProduct);
+	
+	ansDiv.innerHTML = res.ans.replace(/λλ/g, "λ<sup>2</sup>");
+	const show2ndPlus = document.getElementById('show2ndPlus');
+	show2ndPlus.style.display = "block";
 
-	document.getElementById("matrizOperacion").textContent = "(" + valoresX.A1 + "-λ" + ")" + "(" + valoresY.B2 + "-λ" + ")" + " - " + "(" + valoresY.B1 + "*" + valoresX.A2 + ") = 0";
-});
+	const showSteps = document.getElementById('showSteps');
+	showSteps.style.display = "block";
+
+	const show3th = document.getElementById('show3th');
+	show3th.style.display = "block";
+	A4 = Math.abs(A4);
+	B4 = Math.abs(B4);
+	document.getElementById("A1_").textContent = A1;
+	document.getElementById("A2_").textContent = A2;
+	document.getElementById("A4_").textContent = A4;
+	document.getElementById("B1_").textContent = B1;
+	document.getElementById("B2_").textContent = B2;
+	document.getElementById("B4_").textContent = B4;
+} 
+
+async function paso3Ejecucion() {
+	const coefficients = [
+		[A1, A2, 0],
+		[B1, B2, 0],
+	];
+	const rightHandSide = [A4, B4];
+	respuesta = await gaussJordan(coefficients, rightHandSide, 0);
+	a1=parseFloat(respuesta[0].toFixed(2));
+	b1=parseFloat(respuesta[1].toFixed(2));
+
+	document.getElementById("a1").textContent = a1;
+	document.getElementById("b1").textContent = b1;
+	document.getElementById("Xc").innerHTML = "c<sub>1</sub>e<sup>("+λ1+")t</sup> + c<sub>2</sub>e<sup>("+λ2+")t</sup> + " +a1;
+
+	const show3thPlus = document.getElementById('show3thPlus');
+	show3thPlus.style.display = "block";
+	const show_a1_b1 = document.getElementById('show_a1_b1');
+	show_a1_b1.style.display = "block";
+}
 
 function sacarConstantes(ecuacion, type) {
-	console.log(ecuacion);
 	// Utilizar expresiones regulares para extraer los valores
 	const regex = /([+-]?\d*)[ ]?X|([+-]?\d*)[ ]?Y|([+-]?\d+)/g;
 	var valores = ecuacion.match(regex);
@@ -59,15 +88,54 @@ function sacarConstantes(ecuacion, type) {
 		});
 	}
 	if (type == 'x') {
-		return { A1: A, A2: B, A4: C }
+		return {
+			A1: A,
+			A2: B,
+			A4: C
+		}
 	}
 	if (type == 'y') {
-		return { B1: A, B2: B, B4: C }
+		return {
+			B1: A,
+			B2: B,
+			B4: C
+		}
 	}
+}          
+
+function preSimplify(equation) {
+	steps = [];
+	equation = equation.split(" ").join(""); //remove all whitespace for simplicity
+	equation = equation.split("--").join("+"); //double negative = pos
+	if (equation.includes("=")) {
+		//moves all to 1 side. For example,
+		// x=1+y becomes x-(1+y)=0
+		equation = equation.split("=").join("-(");
+		equation += ")";
+		addStep("Move to One Side", equation + " = 0");
+		var equalsZero = true; //whether or not the answer should end in ' = 0'
+	} else {
+		var equalsZero = false;
+	}
+	equation = simplify(equation);
+	equation = combLikeTerms(equation);
+	if (equalsZero) {
+		equation += " = 0";
+	}
+	ecuacionPolinomio = equation;
+	formulaGeneral(equation);
+	return {
+		ans: equation,
+		steps: steps
+	};
+}
+
+function simplify(equation) {
+	equation = addSub(equation); //first deal with addition and subtraction
+	return equation;
 }
 
 function formulaGeneral(equation) {
-	console.log(equation);
 	let ecuacion = equation.replace(/= 0/g, '');
 	// Utilizar expresiones regulares para extraer los valores
 	const regex = /([+-]?\d*)[ ]?λλ|([+-]?\d*)[ ]?λ|([+-]?\d+)/g;
@@ -88,43 +156,18 @@ function formulaGeneral(equation) {
 			}
 		});
 	}
-	console.log("A:", A, " B:", B, " C:", C);
 	result = B * B - 4 * A * C;
 
 	if (result >= 0) {
 		x1 = (-B + Math.sqrt(result)) / (2 * A);
 		x2 = (-B - Math.sqrt(result)) / (2 * A);
-		document.getElementById("λ1").textContent = "λ1 = " + parseFloat(x1.toFixed(2));
-		document.getElementById("λ2").textContent = "λ2 = " + parseFloat(x2.toFixed(2));
-		λ1_x = parseFloat(x1.toFixed(2));
-		λ2_x = parseFloat(x2.toFixed(2));
+		document.getElementById("λ1").textContent = parseFloat(x1.toFixed(2));
+		document.getElementById("λ2").textContent = parseFloat(x2.toFixed(2));
+		λ1 = parseFloat(x1.toFixed(2));
+		λ2 = parseFloat(x2.toFixed(2));
 	} else {
 		$mensaje.html('El valor es negativo');
 	}
-}
-
-async function matrizExtendida() {
-	const coefficients = [
-		[valoresX.A1, valoresX.A2, 0],
-		[valoresY.B1, valoresY.B2, 0],
-	];
-	const rightHandSide = [(-1 * valoresX.A4), (-1 * valoresY.B4)];
-	respuesta = await gaussJordan(coefficients, rightHandSide, 0);
-	document.getElementById("a1").textContent = "a1 = " + parseFloat(respuesta[0].toFixed(2));
-	document.getElementById("b1").textContent = "b1 = " + parseFloat(respuesta[1].toFixed(2));
-
-	document.getElementById("aa1").textContent = valoresX.A1;
-	document.getElementById("aa2").textContent = valoresX.A2;
-	document.getElementById("aa3").textContent = -1;
-	document.getElementById("aa4").textContent = (-1 * valoresX.A4);
-
-	document.getElementById("bb1").textContent = valoresY.B1;
-	document.getElementById("bb2").textContent = valoresY.B2;
-	document.getElementById("bb3").textContent = -1;
-	document.getElementById("bb4").textContent = (-1 * valoresY.B4);
-
-	a1_x = parseFloat(respuesta[0].toFixed(2));
-	document.getElementById("XC").textContent = "X = C1e^"+λ1_x+"t + C2e^"+λ2_x+"t"+" + "+a1_x;
 }
 
 function gaussJordan(x, y, verbose = 0) {
@@ -142,11 +185,17 @@ function gaussJordan(x, y, verbose = 0) {
 		console.log(augmentedMat.map(row => row.map(val => val.toFixed(2))));
 	}
 
-	const outerLoop = [[0, m - 1, 1], [m - 1, 0, -1]];
+	const outerLoop = [
+		[0, m - 1, 1],
+		[m - 1, 0, -1]
+	];
 
 	for (let d = 0; d < 2; d++) {
 		for (let i = outerLoop[d][0]; d === 0 ? i <= outerLoop[d][1] : i >= outerLoop[d][1]; i += outerLoop[d][2]) {
-			const innerLoop = [[i + 1, m, 1], [i - 1, -1, -1]];
+			const innerLoop = [
+				[i + 1, m, 1],
+				[i - 1, -1, -1]
+			];
 
 			for (let j = innerLoop[d][0]; d === 0 ? j < innerLoop[d][1] : j > innerLoop[d][1]; j += innerLoop[d][2]) {
 				const k = (-1) * augmentedMat[j][i] / augmentedMat[i][i];
@@ -178,38 +227,7 @@ function gaussJordan(x, y, verbose = 0) {
 	return augmentedMat.map(row => row[n]);
 }
 
-
-function doAll(equation) {
-	steps = [];
-	equation = equation.split(" ").join(""); //remove all whitespace for simplicity
-	equation = equation.split("--").join("+"); //double negative = pos
-	if (equation.includes("=")) {
-		//moves all to 1 side. For example,
-		// x=1+y becomes x-(1+y)=0
-		equation = equation.split("=").join("-(");
-		equation += ")";
-		addStep("Move to One Side", equation + " = 0");
-		var equalsZero = true; //whether or not the answer should end in ' = 0'
-	} else {
-		var equalsZero = false;
-	}
-	equation = simplify(equation);
-	equation = combLikeTerms(equation);
-	if (equalsZero) {
-		equation += " = 0";
-	}
-	ecuacionPolinomio = equation;
-	formulaGeneral(equation);
-	return {
-		ans: equation,
-		steps: steps
-	};
-}
-
-function simplify(equation) {
-	equation = addSub(equation); //first deal with addition and subtraction
-	return equation;
-}
+////////////////////////////////////// Utilerias de simplify y GaussJordan //////////////////////////////////////
 
 function combLikeTerms(equation) {
 	var parts = splitAddSub(equation)[0];
@@ -243,8 +261,7 @@ function combLikeTerms(equation) {
 	}
 	var toR = [];
 	for (i = 0; i < vars.length; i++) {
-		if (coefs[i] == 0) {
-		} else if (coefs[i] == 1 && vars[i].length == 0) {
+		if (coefs[i] == 0) {} else if (coefs[i] == 1 && vars[i].length == 0) {
 			toR.push("1");
 		} else if (coefs[i] == 1) {
 			toR.push(vars[i]);
@@ -354,7 +371,7 @@ function multiplyDivide(equation) {
 				justExponent = false;
 				var nextPart = simplify(parts[i].slice(1, -1));
 				var addOrSub = splitAddSub(nextPart)[1];
-				nextPart = splitAddSub(nextPart)[0];//the add/sub parts of this equation
+				nextPart = splitAddSub(nextPart)[0]; //the add/sub parts of this equation
 
 				var newRParts = [];
 				for (var j = 0; j < rParts.length; j++) {
@@ -426,13 +443,13 @@ function exponent(equation) {
 		var simplified = simplify(parts[i]);
 		if (!isNaN(simplified) && simplified % 1 == 0) { //it is a whole number
 			parts[i] = simplified;
-			parts[i - 1] = [parts[i - 1]];//turn previous one into a list
+			parts[i - 1] = [parts[i - 1]]; //turn previous one into a list
 			for (var j = 1; j < parts[i]; j++) {
-				parts[i - 1].push(parts[i - 1][0]);//add this many times
+				parts[i - 1].push(parts[i - 1][0]); //add this many times
 			}
-			parts[i - 1] = parts[i - 1].join("*");//join by multiplication
-			parts[i - 1] = simplify(parts[i - 1]);//multiply it out
-			parts.pop();//remove the exponent part
+			parts[i - 1] = parts[i - 1].join("*"); //join by multiplication
+			parts[i - 1] = simplify(parts[i - 1]); //multiply it out
+			parts.pop(); //remove the exponent part
 		} else {
 			parts[i - 1] = "(" + parts[i - 1] + "^" + parts[i] + ")";
 			parts.pop();
@@ -463,11 +480,12 @@ function isParenth(equation) {
 	}
 	return toR;
 }
+
 function splitMulDiv(equation) {
 	var parts = []; //will store it split by multiplication and division
 	var i = 0;
 	var inParen = 0;
-	var mulOrDiv = ["*"];//which are multiplication and which are division
+	var mulOrDiv = ["*"]; //which are multiplication and which are division
 	while (i < equation.length) {
 		if (equation[i] == "(") {
 			inParen++;
@@ -475,14 +493,14 @@ function splitMulDiv(equation) {
 			inParen--;
 		}
 
-		if (inParen == 0) {//if not in parentheses
-			if (equation[i] == "*" && i != 0) {//it is multiplication and there is something to the right and left of it
-				parts.push(equation.slice(0, i));//add a part
+		if (inParen == 0) { //if not in parentheses
+			if (equation[i] == "*" && i != 0) { //it is multiplication and there is something to the right and left of it
+				parts.push(equation.slice(0, i)); //add a part
 				mulOrDiv.push("*");
 				equation = equation.slice(i + 1);
 				i = 0;
-			} else if (equation[i] == "/" && i != 0) {//it is division and there is something to the right and left of it
-				parts.push(equation.slice(0, i));//add a part
+			} else if (equation[i] == "/" && i != 0) { //it is division and there is something to the right and left of it
+				parts.push(equation.slice(0, i)); //add a part
 				mulOrDiv.push("/");
 				equation = equation.slice(i + 1);
 				i = 0;
@@ -506,9 +524,10 @@ function splitMulDiv(equation) {
 	parts.push(equation); //add the part of the equation left over.
 	return [parts, mulOrDiv];
 }
+
 function splitAddSub(equation) {
 	var parts = [];
-	var addOrSub = ["+"];//which parts are added and which are subtracted
+	var addOrSub = ["+"]; //which parts are added and which are subtracted
 	var i = 0;
 	var inParen = 0;
 	while (i < equation.length) {
@@ -518,14 +537,14 @@ function splitAddSub(equation) {
 			inParen--;
 		}
 		if (inParen == 0) {
-			if (equation[i] == "+" && equation[i + 1] != "-") {//it is _+_
+			if (equation[i] == "+" && equation[i + 1] != "-") { //it is _+_
 				parts.push(equation.slice(0, i));
 				equation = equation.slice(i + 1);
 				i = 0;
 				addOrSub.push("+");
-			} else if (equation[i] == "+" && equation[i + 1] == "-") {//it is _+-_
+			} else if (equation[i] == "+" && equation[i + 1] == "-") { //it is _+-_
 				equation = equation.slice(0, i) + equation.slice(i + 1);
-			} else if (equation[i] == "-" && equation[i - 1] != "*") {//it is _-_, but not _*-_
+			} else if (equation[i] == "-" && equation[i - 1] != "*") { //it is _-_, but not _*-_
 				if (equation.slice(0, i) == "") {
 					addOrSub.pop();
 					addOrSub.push("-");
@@ -542,9 +561,10 @@ function splitAddSub(equation) {
 			i++;
 		}
 	}
-	parts.push(equation);//add whatever is left to the list.
+	parts.push(equation); //add whatever is left to the list.
 	return [parts, addOrSub];
 }
+
 function splitExp(equation) {
 	var parts = [];
 	var addOrSub = ["+"];
@@ -569,19 +589,22 @@ function splitExp(equation) {
 			i++;
 		}
 	}
-	parts.push(equation);//add whatever is left to the list.
+	parts.push(equation); //add whatever is left to the list.
 	return parts;
 }
 
 function addStep(type, text) {
 	steps.push([type, text]);
 }
+
 function isVar(x) {
 	return "abcdefghijklmnopqrstuvwxyz()".includes(x);
 }
+
 function isVarOrNum(x) {
 	return "abcdefghijklmnopqrstuvwxyz1234567890()".includes(x);
 }
+
 function percise(x, numDigs = 8) {
 	return Math.round(x * 10 ** numDigs + Number.EPSILON) / 10 ** numDigs;
 }

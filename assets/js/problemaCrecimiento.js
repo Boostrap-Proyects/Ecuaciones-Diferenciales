@@ -20,26 +20,26 @@ function paso1Colecta() {
         mensajes.push("* Favor de llenar todos los campos");
     }
     // Validar los tiempos
-    if (tiempoI !== 0 || tiempoF !== 10) {
+    if (tiempoI !== 0 || tiempoF !== 20) {
         mensajes.push("* El tiempo es incorrecto");
     }
     // Validar las poblaciones
-    if (poblacionI !== 25000 || poblacionF !== 30000) {
+    if (poblacionI !== 10000 || poblacionF !== 13000) {
         mensajes.push("* La población es incorrecta");
     }
     // Validar las potencias
-    if (potenciaI !== 0 || potenciaF !== 10) {
+    if (potenciaI !== 0 || potenciaF !== 20) {
         mensajes.push("* La potencia t es incorrecta");
     }
     // Todo correcto
     if (mensajes.length === 0) {
         mensajes.push("Correcto!, ahora las C se igualan (c = c) y enseguida se despeja la constante e. Favor de completar el despeje:",true);
 
-        document.getElementById("c1").textContent = "c = 250000";
-        var c2Content = "c = 30000 / e<sup>10k</sup>";
+        document.getElementById("c1").textContent = "c = 10000";
+        var c2Content = "c = 13000 / e<sup>20k</sup>";
         document.getElementById("c2").innerHTML = c2Content;
 
-        var igualacion = "25000 = 30000 / e<sup>10k</sup>";
+        var igualacion = "10000 = 13000 / e<sup>20k</sup>";
         document.getElementById("c=c").innerHTML = igualacion;
     }
     return mensajes;
@@ -94,16 +94,16 @@ function paso2Colecta() {
         mensajes.push("* Favor de llenar todos los campos");
     }
     // Validar las poblaciones
-    if (P1 !== 30000 || P2 !== 25000) {
+    if (P1 !== 13000 || P2 !== 10000) {
         mensajes.push("* El despeje es icorrecto");
     }
     // Todo correcto
     if (mensajes.length === 0) {
         mensajes.push("Correcto!, ahora se aplica ln() en ambos lados para eliminar la e. Favor de completar el despeje:",true);
 
-        var ultimos1 = "ln(e<sup>10k</sup>) = ln(6/5)";
+        var ultimos1 = "ln(e<sup>20k</sup>) = ln(13/10)";
         document.getElementById("ultimos1").innerHTML = ultimos1;
-        var ultimos2 = "10k = ln(6/5)";
+        var ultimos2 = "20k = ln(13/10)";
         document.getElementById("ultimos2").innerHTML = ultimos2;
     }
     return mensajes;
@@ -157,15 +157,15 @@ function paso3Colecta() {
         mensajes.push("* Favor de llenar todos los campos");
     }
     // Validar Despeje
-    if (PP1 !== "ln(6/5)" || PP2 !== 10) {
+    if (PP1 !== "ln(13/10)" || PP2 !== 20) {
         mensajes.push("* El despeje es incorrecto");
     }
     // Todo correcto
     if (mensajes.length === 0) {
-        mensajes.push("Correcto!, el despeje de la tasa k es 0.0182. Ahora contesta las siguientes preguntas del problema:",true);
-        document.getElementById("equivalent").textContent = "≈ 0.0182";
-        document.getElementById("pregunta1").textContent = "¿Que población puede esperar el planificador de la ciudad para el 2000?";
-        document.getElementById("pregunta2").textContent = "¿Que población puede esperar el planificador de la ciudad para el 2023?";
+        mensajes.push("Correcto!, el despeje de la tasa k es 0.013118. Ahora contesta las siguientes preguntas del problema:",true);
+        document.getElementById("equivalent").textContent = "≈ 0.013118";
+        document.getElementById("pregunta1").textContent = "¿Que población puede esperar el planificador de la ciudad para el 2100?";
+        document.getElementById("pregunta2").textContent = "¿Que población puede esperar el planificador de la ciudad para el 2145?";
     }
     return mensajes;
 }
@@ -208,55 +208,46 @@ function paso3Ejecucion() {
 
 function paso4Colecta() {
     const tPregunta1 = parseFloat(document.getElementById('tPregunta1').value);
-    const ptPregunta1 = parseFloat(document.getElementById('ptPregunta1').value);
     const k1 = parseFloat(document.getElementById('k1').value);
     const t1 = parseFloat(document.getElementById('t1').value);
     
-    const tPregunta2 = parseFloat(document.getElementById('tPregunta2').value);
-    const ptPregunta2 = parseFloat(document.getElementById('ptPregunta2').value);
-    const k2 = parseFloat(document.getElementById('k2').value);
-    const t2 = parseFloat(document.getElementById('t2').value);
 
     const mensajes = [];
     //Validar nulos
     if (
-        isNaN(tPregunta1) || isNaN(ptPregunta1) || isNaN(k1) || isNaN(t1) ||
-        isNaN(tPregunta2) || isNaN(ptPregunta2) || isNaN(k2) || isNaN(t2)
+        isNaN(tPregunta1) || isNaN(k1) || isNaN(t1)
     ) {
         mensajes.push("* Favor de llenar todos los campos");
     }
     // Validar Tiempo
-    if (tPregunta1 !== 40 || tPregunta2 !== 63) {
+    if (tPregunta1 !== 100) {
         mensajes.push("* El tiempo es incorrecto");
     }
-    // Validar expresionP(t)
-    if (ptPregunta1 !== 40 || ptPregunta2 !== 63) {
-        mensajes.push("* La expresion P(t) es incorrecta");
-    }
     // Validar exponente k
-    if (k1 !== 0.0182 || k2 !== 0.0182) {
+    if (k1 !== 0.013118) {
         mensajes.push("* El exponente k es incorrecto");
     }
     // Validar Tiempo
-    if (t1 !== 40 || t2 !== 63) {
+    if (t1 !== 100) {
         mensajes.push("* El exponente t es incorrecto");
     }
     // Todo correcto
     if (mensajes.length === 0) {
-        mensajes.push("Felicidades!, has resuelto un problema de crecimiento poblacional de condiciones iniciales",true);
-        document.getElementById("habitantesP1").textContent = "≈ 51773 habitantes";
-        document.getElementById("habitantesP2").textContent = "≈ 78686 habitantes";
+        mensajes.push("Correcto! continua resolviendo la siguiente pregunta",true);
+        document.getElementById("habitantesP1").textContent = "≈ 37128 habitantes";
     }
     return mensajes;
 }
 
 function paso4Mensaje(mensajes) {
     const mensajes4 = document.getElementById('mensajes4');
+    const show5th = document.getElementById('show5th');
     mensajes4.innerHTML = '';
 
     if (mensajes.includes(true)) {
         mensajes4.classList.remove("error");
         mensajes4.classList.add("correct"); 
+        show5th.style.display = "block";
         mensajes4.innerHTML = mensajes[0];
 
       } else {
@@ -278,4 +269,70 @@ function paso4Mensaje(mensajes) {
 function paso4Ejecucion() {
     const mensajes = paso4Colecta();
     paso4Mensaje(mensajes);
+}
+
+
+
+
+
+function paso5Colecta() {   
+    const tPregunta2 = parseFloat(document.getElementById('tPregunta2').value);
+    const k2 = parseFloat(document.getElementById('k2').value);
+    const t2 = parseFloat(document.getElementById('t2').value);
+
+    const mensajes = [];
+    //Validar nulos
+    if (
+        isNaN(tPregunta2) || isNaN(k2) || isNaN(t2)
+    ) {
+        mensajes.push("* Favor de llenar todos los campos");
+    }
+    // Validar Tiempo
+    if (tPregunta2 !== 145) {
+        mensajes.push("* El tiempo es incorrecto");
+    }
+    // Validar exponente k
+    if (k2 !== 0.013118) {
+        mensajes.push("* El exponente k es incorrecto");
+    }
+    // Validar Tiempo
+    if (t2 !== 145) {
+        mensajes.push("* El exponente t es incorrecto");
+    }
+    // Todo correcto
+    if (mensajes.length === 0) {
+        mensajes.push("Felicidades!, has resuelto un problema de crecimiento poblacional de condiciones iniciales",true);
+        document.getElementById("habitantesP2").textContent = "≈ 67000 habitantes";
+    }
+    return mensajes;
+}
+
+function paso5Mensaje(mensajes) {
+    const mensajes5 = document.getElementById('mensajes5');
+    mensajes5.innerHTML = '';
+
+    if (mensajes.includes(true)) {
+        mensajes5.classList.remove("error");
+        mensajes5.classList.add("correct"); 
+        mensajes5.innerHTML = mensajes[0];
+
+      } else {
+        mensajes5.classList.remove("correct");
+        mensajes5.classList.add("error")
+
+        const lista = document.createElement('ul');
+        mensajes.forEach(error => {
+            const errorItem = document.createElement('li');
+            errorItem.innerText = error;
+            lista.appendChild(errorItem);
+        });
+        mensajes5.appendChild(lista);
+      }
+
+    mensajes5.style.display = "block";
+}
+
+function paso5Ejecucion() {
+    const mensajes = paso5Colecta();
+    paso5Mensaje(mensajes);
 }
