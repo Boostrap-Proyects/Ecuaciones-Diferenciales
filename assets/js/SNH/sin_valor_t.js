@@ -5,23 +5,70 @@ var a1,b1;
 const error = document.querySelector('.error')
 const correct = document.querySelector('.correct')
 
-async function paso1Ejecucion() {
-	const X = await sacarConstantes(document.getElementById('X').value.toUpperCase(), 'x');
-	const Y = await sacarConstantes(document.getElementById('Y').value.toUpperCase(), 'y');
-	A1=X.A1; A2=X.A2; A4=X.A4;  B1=Y.B1; B2=Y.B2; B4=Y.B4;
-
-	document.getElementById("A1-λ").textContent = A1+" - λ";
-	document.getElementById("A2").textContent = A2;
-
-	document.getElementById("B1").textContent = B1;
-	document.getElementById("B2-λ").textContent = B2+" - λ";
-	document.getElementById("MatrizProduct").textContent = "(" + X.A1 + "-λ" + ")" + "(" + Y.B2 + "-λ" + ")" + " - " + "(" + Y.B1 + "*" + X.A2 + ") = 0";
-
-	const show2nd = document.getElementById('show2nd');
-	show2nd.style.display = "block";
+async function paso1() {
+    const mensajes = await colecta();
+    aviso(mensajes);
 }
 
-function paso2Ejecucion() {
+async function colecta() {
+	const input1 = document.getElementById('X').value.toUpperCase();
+	const input2 = document.getElementById('Y').value.toUpperCase();
+
+	const mensajes = [];
+	//Validar que contenga X y Y
+	if (!input1.includes("X") || !input1.includes("Y")) {
+		mensajes.push("* La ecuación 1 debe contener las variable X y Y");
+	}
+	if (!input2.includes("X") || !input2.includes("Y")) {
+		mensajes.push("* La ecuación 2 debe contener las variables X y Y");
+	}
+	// Todo correcto
+	if (mensajes.length === 0) {
+		mensajes.push("Los coeficientes obtenidos del par de ecuaciones se sustituyen en la fórmula del polinomio característico:",true);
+		const X = await sacarConstantes(input1, 'x');
+		const Y = await sacarConstantes(input2, 'y');
+		A1=X.A1; A2=X.A2; A4=X.A4;  B1=Y.B1; B2=Y.B2; B4=Y.B4;
+		var coeficientesA = "A<sub>1</sub>="+A1+" , A<sub>2</sub>="+A2+" , A<sub>4</sub>="+A4; 
+		document.getElementById("coeficientesA").innerHTML = coeficientesA;
+		var coeficientesB = "B<sub>1</sub>="+B1+" , B<sub>2</sub>="+B2+" , B<sub>4</sub>="+B4; 
+		document.getElementById("coeficientesB").innerHTML = coeficientesB;
+		document.getElementById("A1-λ").textContent = A1+" - λ";
+		document.getElementById("A2").textContent = A2;
+		document.getElementById("B1").textContent = B1;
+		document.getElementById("B2-λ").textContent = B2+" - λ";
+		document.getElementById("MatrizProduct").textContent = "(" + X.A1 + "-λ" + ")" + "(" + Y.B2 + "-λ" + ")" + " - " + "(" + Y.B1 + "*" + X.A2 + ") = 0";
+	}
+	return mensajes;
+}
+
+function aviso(mensajes) {
+    const mensajes1 = document.getElementById('mensajes1');
+    const show2nd = document.getElementById('show2nd');
+    mensajes1.innerHTML = '';
+
+    if (mensajes.includes(true)) {
+        mensajes1.classList.remove("error");
+        mensajes1.classList.add("correct"); 
+        mensajes1.innerHTML = mensajes[0];
+        show2nd.style.display = "block";
+
+      } else {
+        mensajes1.classList.remove("correct");
+        mensajes1.classList.add("error")
+
+        const lista = document.createElement('ul');
+        mensajes.forEach(error => {
+            const errorItem = document.createElement('li');
+            errorItem.innerText = error;
+            lista.appendChild(errorItem);
+        });
+        mensajes1.appendChild(lista);
+      }
+
+    mensajes1.style.display = "block";
+}
+
+function paso2() {
 	var ansDiv = document.getElementById("ansDiv");
 	var MatrizProduct = document.getElementById("MatrizProduct");
     MatrizProduct = MatrizProduct.textContent || MatrizProduct.innerText;
@@ -37,6 +84,11 @@ function paso2Ejecucion() {
 
 	const show3th = document.getElementById('show3th');
 	show3th.style.display = "block";
+
+	const mensajes2 = document.getElementById('mensajes2');
+	mensajes2.innerHTML = "Se desarrolla el polinomio multiplicando en diagonal de arriba a abajo, menos el producto diagonal de abajo a arriba, resultando así en una ecuación cuadrática. Utilizando la ecuación general se obtienen λ<sub>1</sub> y λ<sub>2</sub>";
+    mensajes2.style.display = "block";
+
 	A4 = Math.abs(A4);
 	B4 = Math.abs(B4);
 	document.getElementById("A1_").textContent = A1;
@@ -47,7 +99,7 @@ function paso2Ejecucion() {
 	document.getElementById("B4_").textContent = B4;
 } 
 
-async function paso3Ejecucion() {
+async function paso3() {
 	const coefficients = [
 		[A1, A2, 0],
 		[B1, B2, 0],
@@ -63,8 +115,13 @@ async function paso3Ejecucion() {
 
 	const show3thPlus = document.getElementById('show3thPlus');
 	show3thPlus.style.display = "block";
+
 	const show_a1_b1 = document.getElementById('show_a1_b1');
 	show_a1_b1.style.display = "block";
+
+	const mensajes3 = document.getElementById('mensajes3');
+	mensajes3.innerHTML = "Se utiliza el método de eliminación de Gauss-Jordan sustituyendo los coeficientes en la matriz. El resultado nos da a<sub>1</sub> y b<sub>1</sub>, por lo que la representación de X<sub>c</sub> está completa";
+    mensajes3.style.display = "block";
 }
 
 function sacarConstantes(ecuacion, type) {

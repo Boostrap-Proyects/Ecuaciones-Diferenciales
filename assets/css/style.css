@@ -1734,6 +1734,7 @@ button, a { transition: var(--transition); }
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .submenu {
@@ -1774,6 +1775,7 @@ li:hover .submenu {
   padding: 20px 25px;
   border-left: 4px solid var(--orange-soda);
   text-align: center;
+  margin-bottom: 0px;
 }
 
 .contenedor-problema {
@@ -1781,14 +1783,81 @@ li:hover .submenu {
   align-items: baseline;
 }
 
+.input_tiempopoblacion{
+  display: inline-block;
+  padding: 2.5px; 
+  border-radius: 5px; 
+  border: 0.1em solid #ccc; 
+  color: rgb(0, 0, 0);
+  margin-right: 20px;
+  margin-left: 2px;
+  width: 4em;
+  height: 1.5em;
+  font-size: 1.2em;
+}
+.input_superindice{
+  position: relative;
+  top: -0.5em;
+  font-size: 1.2em;
+  width: 1.6em;
+  height: 1.5em;
+  margin-left: 1px;
+  padding: 0.1em;
+  border-radius: 0.3em ;
+  border: 0.1em solid #ccc; 
+}
+.input_XY{
+  font-size: 1em;
+  height: 1.5em; 
+  width: 7em;
+  display: inline-block;
+  padding: 3px;
+  box-sizing: border-box;
+}
+.label_PCI{
+  font-size: 1.2em;
+}
+.label_superindice{
+  position: relative;
+  top: -0.6em;
+  font-size: 1.2em;
+}
+
+
+.label_fraccion {
+  display: inline-block;
+  position: relative;
+  top: -0.77em;
+}
+.label_linea {
+  border-top: 0.14em solid black;
+  margin: 0 auto;
+  width: 100%;
+}
+.numerador, .denominador {
+  display: block;
+}
+.input_fraccion {
+  display: inline-block;
+  position: relative;
+  top: -0.9em;
+}
+.input_linea {
+  border-top: 0.14em solid black;
+  margin-top: 0.2px;
+  margin-bottom: 0.2px;
+  width: 80%;
+}
+
+/*para destruir*/
 .input-problema {
-  margin-left: 3px;
-  margin-right: 3px;
   font-size: 1em;
   height: 1.5em; 
   width: 5em;
+  display: inline-block;
+  padding: 3px;
+  box-sizing: border-box;
 }
-
 .superindice {
   font-size: 0.8em;
 
@@ -1798,7 +1867,7 @@ li:hover .submenu {
   margin-left: 1px;
   margin-right: 3px;
 }
-
+/*para destruir*/
 
 
 .btn-customized {
@@ -1842,41 +1911,30 @@ li:hover .submenu {
   display: none;
   background: hsla(7, 78%, 53%, 0.05);
   color: black;
-  line-height: 1.8;
+  line-height: 1.7;
   padding: 12px 20px;
   border-left: 4px solid var(--orange-soda);
   text-align: left;
-  width: 27%;
-  margin-left: 20px;
+  width: 50%;
+  margin-left: 15px;
 }
 .correct {
   display: none;
   background: hsla(89, 72%, 45%, 0.05);
   color: black;
-  line-height: 1.8;
+  line-height: 1.7;
   padding: 12px 20px;
   border-left: 4px solid var(--yellow-green);
   text-align: left;
-  width: 40%;
-  margin-left: 20px;
-}
-
-.fraccion {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.superindice-c {
-  vertical-align: super;
-  font-size: smaller;
+  width: 50%;
+  margin-left: 15px;
 }
 
 
 .video-container {
-  position:relative;
-  width: 100%; /* Puedes ajustar el ancho según tus necesidades */
-  max-width: 1300px; /* Establece un ancho máximo para evitar que la caja sea demasiado grande */
-  padding-bottom: 56.25%; /* Proporción de aspecto 16:9 para el contenedor de video (altura/videowidth) */
+  position: relative;
+  padding-bottom: 50%; 
+  height: 0;
   overflow: hidden;
 }
 
@@ -1909,12 +1967,6 @@ li:hover .submenu {
 
 
 
-
-
-
-
-
-
 .container-sistema2x2 {
   display: flex;
   justify-content: flex-end;
@@ -1930,14 +1982,6 @@ li:hover .submenu {
   margin-bottom: 10px;
 }
 
-.XY{
-  font-size: 1em;
-  height: 1.5em; 
-  width: 7em;
-  display: inline-block;
-  padding: 3px;
-  box-sizing: border-box;
-}
 .XY-label{
     font-size: 1em;
     height: 1.5em;
@@ -1955,7 +1999,7 @@ li:hover .submenu {
   align-items: center;
 }
 
-.XcXp-label{
-  font-size: 1.5em;
-  height: 2em;
+::placeholder {
+  color: #555;
+  font-size: 12px;
 }

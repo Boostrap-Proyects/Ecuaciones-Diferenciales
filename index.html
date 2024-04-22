@@ -68,7 +68,7 @@
             </li>
 
             <li>
-              <a href="https://www.youtube.com/@Ecuaciones_Diferenciales" target="_blank"
+              <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg" target="_blank"
                 class="header-top-social-link">
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
@@ -109,22 +109,22 @@
             <ul class="navbar-list">
 
               <li>
-                <a href="index.html#inicio" class="navbar-link" data-nav-link>Inicio</a>
+                <a href="#inicio" class="navbar-link" data-nav-link>Inicio</a>
               </li>
 
               <li>
-                <a href="index.html#equipo" class="navbar-link" data-nav-link>Equipo</a>
+                <a href="#equipo" class="navbar-link" data-nav-link>Equipo</a>
               </li>
 
               <li>
-                <a href="index.html#material" class="navbar-link" data-nav-link>Material</a>
+                <a href="#material" class="navbar-link" data-nav-link>Material</a>
               </li>
 
               <li>
-                <a href="index.html#servicios" class="navbar-link" data-nav-link>Métodos</a>
+                <a href="#metodos" class="navbar-link" data-nav-link>Métodos</a>
                 <ul class="submenu navbar-link">
-                  <li><a class="hover-text" href="solucionadorSNH.html">SistemaNH 2X2</a></li>
-                  <li><a class="hover-text" href="problemasCI.html">Problemas de CI</a></li>
+                  <li><a class="hover-text" href="./views/SNH/index.html">Sistemas no homogeneos</a></li>
+                  <li><a class="hover-text" href="./views/PCI/index.html">Problemas de condiciones iniciales</a></li>
                   <li><a class="hover-text" href="#">Teoría y fórmulas</a></li>
                   <li><a class="hover-text" href="#">Ejercicios para el cuaderno</a></li>
                 </ul>
@@ -137,8 +137,7 @@
 
         <div class="header-bottom-actions">
 
-          <input class="input-problema" style="width: 10em;" type="text" id="searchInput"
-            placeholder="Palabras clave...">
+          <input type="text" id="searchInput" placeholder="Buscar" style="padding: 10px; border-radius: 5px; border: 2px solid #ccc; font-size: 16px; color: #333;">
           <button class="header-bottom-actions-btn" aria-label="Search" onclick="searchOnPage()">
             <ion-icon name="search-outline"></ion-icon>
             <span>Search</span>
@@ -211,7 +210,8 @@
           <div class="container">
 
             <figure class="about-banner">
-              <img src="./assets/images/acerca-banner.jpg" alt="Library">
+              <img src="./assets/images/acerca-banner.png" alt="Library">
+              <img src="./assets/images/acerca-banner2.png" alt="Library">
             </figure>
 
             <div class="about-content">
@@ -221,57 +221,63 @@
               <h2 class="h2 section-title">La creación del proyecto</h2>
 
               <p class="about-text">
-                La razón de crear esta aplicación web es para simplificar la resolución y el aprendizaje de los métodos
+                La razón de esta aplicación web es para simplificar la resolución y el aprendizaje de los métodos
                 que tienen las ecuaciones diferenciales.
-                El programa busca proporcionar herramientas prácticas y accesibles para estudiantes y profesionales,
-                permitiéndoles comprender y resolver problemas de manera eficiente.
-                Mediante la estructura de página que tiene cada método se pretende que el tema quede comprendido
-                completamente para el usuario, es por eso que se optó por 3 secciones:
-              <ul class="about-text flechita-lista" style="margin-top: -10px;">
-                <li style="margin-bottom: 10px;">Redacción de un resumen del tema presentando los conceptos y fórmulas
-                  principales, además de un video del profesor resolviendo un problema mientras lo va explicando.</li>
-                <li style="margin-bottom: 10px;">Imagen de un problema resuelto hecho en libreta</li>
-                <li>Un problema interactivo con entrada de datos para que el usuario lo resuelva, calificando sus
-                  respuestas por cada paso.</li>
-              </ul>
+
+                El programa busca ser una herramienta práctica para estudiantes y profesionales,
+                permitiéndoles obtener la respuesta a problemas de forma rápida y eficaz, mientras a su vez
+                comprenden el procedimiento paso a paso.
+
+                Creemos que mediante nuestra estructura 4 secciones por página el usuario podrá aprender completamente
+                el método perteneciente a la unidad de ecuaciones diferenciales:
+
+                <ul class="about-list">
+
+                  <li class="about-item">
+                    <div class="about-item-icon">
+                      <ion-icon name="book-outline"></ion-icon>
+                    </div>
+                    <p class="about-item-text">Escrito - redacción del tema mostrando fórmulas y conceptos clave para los problemas.</p>
+                  </li>
+  
+                  <li class="about-item">
+                    <div class="about-item-icon">
+                      <ion-icon name="image-outline"></ion-icon>
+                    </div>
+                    <p class="about-item-text">Gráfico - presentación de imágenes sobre problemas del tema resueltos.</p>
+                  </li>
+  
+                  <li class="about-item">
+                    <div class="about-item-icon">
+                      <ion-icon name="videocam-outline"></ion-icon>
+                    </div>
+                    <p class="about-item-text">Audiovisual - grabación de un problema siendo resuelto y explicado por el profesor.</p>
+                  </li>
+  
+                  <li class="about-item">
+                    <div class="about-item-icon">
+                      <ion-icon name="pencil-outline"></ion-icon>
+                    </div>
+                    <p class="about-item-text">Interactivo - problema con entrada de datos para la respuesta y correción errores.</p>
+                  </li>
+  
+                </ul>
               </p>
 
-              <h2 class="h3 section-title" style="margin-top: -10px;">Objetivos:</h2>
-              <ul class="about-list">
+              <p style="margin-top: -20px;" class="about-text">
+                Objetivos de la aplicación:
 
-                <li class="about-item">
-                  <div class="about-item-icon">
-                    <ion-icon name="star-outline"></ion-icon>
-                  </div>
-                  <p class="about-item-text">Ser de fácil uso para el usuario</p>
-                </li>
+                <ul style="margin-top: -20px;" class="about-list flechita-lista">
+                  <li class="about-item"><p class="about-item-text">De fácil uso para el usuario</p></li>
+                  <li class="about-item"><p class="about-item-text">Completo entendimiento del tema</p></li>
+                  <li class="about-item"><p class="about-item-text">Comprensión de los problemas aplicados</p></li>
+                  <li class="about-item"><p class="about-item-text">Comprensión de los problemas calculados</p></li>
+                </ul>
+              </p>
 
-                <li class="about-item">
-                  <div class="about-item-icon">
-                    <ion-icon name="star-outline"></ion-icon>
-                  </div>
-                  <p class="about-item-text">Obtener entendimiento del tema</p>
-                </li>
-
-                <li class="about-item">
-                  <div class="about-item-icon">
-                    <ion-icon name="star-outline"></ion-icon>
-                  </div>
-                  <p class="about-item-text">Comprensión de los problemas de aplicación</p>
-                </li>
-
-                <li class="about-item">
-                  <div class="about-item-icon">
-                    <ion-icon name="star-outline"></ion-icon>
-                  </div>
-                  <p class="about-item-text">Comprensión de la solución del problema</p>
-                </li>
-
-              </ul>
-
-              <p class="callout">
-                “No hay menos belleza en una exacta ecuación que en una frase precisa.
-                Pero cada ciencia tiene su propio lenguaje estético”. — Marc Bloch
+              <p style="margin-top: -20px;" class="callout">
+                “It is well known that the central problem of the whole of modern mathematics is the study of transcendental
+                functions defined by differential equations.” — Felix Klein
               </p>
 
               <!-- <a href="#service" class="btn">Referencias</a> -->
@@ -307,8 +313,7 @@
                     Docente en matemáticas y estadística
                   </p>
                   <p class="card-text">
-                    Lider de la investigación, proporcionando la solución a diversos métodos de EDO, y creador de
-                    tutoriales matemáticas.
+                    ● Tutor de la investigación ●Creador de contenido educativo ●Proveedor de soluciones a todos los problemas de EDO.
                   </p>
 
                   <a href="#" class="card-link">
@@ -332,11 +337,10 @@
                   </h3>
 
                   <p class="card-text" style="text-decoration: underline">
-                    Estudiante de Ingeniería en Sistemas
+                    Estudiante de ingeniería en sistemas
                   </p>
                   <p class="card-text">
-                    Desarrollador de la página web, proporcionando diseño y lógica para la resolución de problemas de
-                    EDO.
+                    ●Desarrollador de la página web ●Administrador del canal ecuaciones diferenciales ●Autor de la investigación
                   </p>
 
                   <a href="#" class="card-link">
@@ -363,8 +367,7 @@
                     Estudiante de Ingeniería en Sistemas
                   </p>
                   <p class="card-text">
-                    Redactor del artículo de investigación durante un semestre, solucionando problemas aplicados de EDO
-                    para libreta.
+                    ●Sucesor del desarrollo de la página web ●Proveedor de soluciones a problemas aplicativos de EDO
                   </p>
 
                   <a href="#" class="card-link">
@@ -412,9 +415,9 @@
                     </h3>
 
                     <p class="card-text">
-                      Descubre la solución de sistemas de ecuaciones diferenciales 2x2 sin la variable temporal 't' en
+                      Aprende la solución de sistemas de ecuaciones diferenciales 2x2 sin la variable temporal 't' en
                       este breve video educativo.
-                      Simplificamos el proceso paso a paso, proporcionando una comprensión clara y directa de este tema
+                      El proceso simplificado paso a paso proporciona una comprensión clara y directa de este tema
                       matemático.
                     </p>
                   </div>
@@ -423,12 +426,14 @@
                     <div class="card-author">
 
                       <figure class="author-avatar">
-                        <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                        <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg"target="_blank">
+                          <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                        </a>
                       </figure>
 
                       <div>
                         <p class="author-name">
-                          <a href="https://www.youtube.com/@Ecuaciones_Diferenciales/playlists"
+                          <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg"
                             target="_blank">Ecuaciones Diferenciales</a>
                         </p>
                         <p class="author-title">Tutoriales precisos para estudiantes de ingeniería
@@ -479,10 +484,8 @@
                     </h3>
 
                     <p class="card-text">
-                      Comenzamos por expresar la tasa de cambio de la población en función al tiempo mediante una
-                      ecuación diferencial.
-                      Luego utilizamos las condiciones iniciales proporcionadas para determinar las constantes y la
-                      solución particular.
+                      Este tema se rige por la expresión P(t), la cual representa la población en función al tiempo.
+                      Mediante su fórmula P(t) = Ce<sup>kt</sup> y sustituyendo los datos del problema es posible conocer las cantidades de interés.
                     </p>
                   </div>
 
@@ -490,12 +493,14 @@
                     <div class="card-author">
 
                       <figure class="author-avatar">
-                        <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                        <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg"target="_blank">
+                          <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                        </a>
                       </figure>
 
                       <div>
                         <p class="author-name">
-                          <a href="https://www.youtube.com/@Ecuaciones_Diferenciales/playlists"
+                          <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg"
                             target="_blank">Ecuaciones Diferenciales</a>
                         </p>
                         <p class="author-title">Tutoriales precisos para estudiantes de ingeniería
@@ -546,9 +551,8 @@
                     </h3>
 
                     <p class="card-text">
-                      En este video calculamos el monto acumulado después de un cierto período de tiempo, tomando en
-                      cuenta la tasa de interés compuesto y las condiciones iniciales.
-                      La fórmula clave para este proceso es: A(t) = Ce^rt
+                      Este tema se rige por la expresión A(t), la cual representa el monto acumulado después de un cierto período de tiempo t.
+                      Mediante su fórmula A(t) = Ce<sup>rt</sup> y usando los datos del problema es posible conocer las cantidades de interés.
                     </p>
                   </div>
 
@@ -556,12 +560,14 @@
                     <div class="card-author">
 
                       <figure class="author-avatar">
-                        <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                        <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg"target="_blank">
+                          <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                        </a>
                       </figure>
 
                       <div>
                         <p class="author-name">
-                          <a href="https://www.youtube.com/@Ecuaciones_Diferenciales/playlists"
+                          <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg"
                             target="_blank">Ecuaciones Diferenciales</a>
                         </p>
                         <p class="author-title">Tutoriales precisos para estudiantes de ingeniería
@@ -612,9 +618,8 @@
                     </h3>
 
                     <p class="card-text">
-                      Comenzamos por formular el modelo con dy/dt = -k⋅y, luego se incorporan las condiciones iniciales
-                      en el t=0. Se resuelve la ecuación diferencial
-                      determinando los parámetros e interpretando los respecto a la constante de decaimiento k
+                      Este tema se rige por la expresión N(t), la cual representa la cantidad de sustancia radioactiva que queda en el tiempo t.
+                      Mediante su fórmula N(t) = N<sub>0</sub>e<sup>−λt</sup> y los datos del problema es posible conocer las cantidades de interés.
                     </p>
                   </div>
 
@@ -622,12 +627,14 @@
                     <div class="card-author">
 
                       <figure class="author-avatar">
-                        <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                        <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg"target="_blank">
+                          <img src="./assets/images/channel.png" alt="Ecuaciones Diferenciales" class="w-100">
+                        </a>
                       </figure>
 
                       <div>
                         <p class="author-name">
-                          <a href="https://www.youtube.com/@Ecuaciones_Diferenciales/playlists"
+                          <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg"
                             target="_blank">Ecuaciones Diferenciales</a>
                         </p>
                         <p class="author-title">Tutoriales precisos para estudiantes de ingeniería
@@ -663,8 +670,8 @@
         </section>
 
 
-        <!-- #SERVICIOS -->
-        <section class="features" id="servicios">
+        <!-- #METODOS -->
+        <section class="features" id="metodos">
           <div class="container">
 
             <p class="section-subtitle">Métodos</p>
@@ -674,13 +681,13 @@
             <ul class="features-list">
 
               <li>
-                <a href="solucionadorSNH.html" class="features-card">
+                <a href="./views/SNH/index.html" class="features-card">
 
                   <div class="card-icon">
                     <ion-icon name="calculator-outline"></ion-icon>
                   </div>
 
-                  <h3 class="card-title">Sistema no homogeneo 2X2</h3>
+                  <h3 class="card-title">Sistemas no homogeneos</h3>
 
                   <div class="card-btn">
                     <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -690,7 +697,7 @@
               </li>
 
               <li>
-                <a href="problemasCI.html" class="features-card">
+                <a href="./views/PCI/index.html" class="features-card">
 
                   <div class="card-icon">
                     <ion-icon name="book-outline"></ion-icon>
@@ -712,7 +719,7 @@
                     <ion-icon name="flask-outline"></ion-icon>
                   </div>
 
-                  <h3 class="card-title">Galería de teorías/fórmulas</h3>
+                  <h3 class="card-title">Teoría y fórmulas</h3>
 
                   <div class="card-btn">
                     <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -867,7 +874,7 @@
               </li>
 
               <li>
-                <a href="https://www.youtube.com/@Ecuaciones_Diferenciales" target="_blank" class="social-link">
+                <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg" target="_blank" class="social-link">
                   <ion-icon name="logo-youtube"></ion-icon>
                 </a>
               </li>
@@ -885,19 +892,19 @@
               </li>
 
               <li>
-                <a href="index.html#inicio" class="footer-link">Inicio</a>
+                <a href="#inicio" class="footer-link">Inicio</a>
               </li>
 
               <li>
-                <a href="index.html#equipo" class="footer-link">Equipo</a>
+                <a href="#equipo" class="footer-link">Equipo</a>
               </li>
 
               <li>
-                <a href="index.html#material" class="footer-link">Material</a>
+                <a href="#material" class="footer-link">Material</a>
               </li>
 
               <li>
-                <a href="index.html#servicios" class="footer-link">Métodos</a>
+                <a href="#metodos" class="footer-link">Métodos</a>
               </li>
 
             </ul>
@@ -919,11 +926,11 @@
               </li>
 
               <li>
-                <a href="#" class="footer-link">Galeria</a>
+                <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg" target="_blank" class="footer-link">Canal</a>
               </li>
 
               <li>
-                <a href="#" class="footer-link">Referencias</a>
+                <a href="#" class="footer-link">Ejercicios</a>
               </li>
 
             </ul>

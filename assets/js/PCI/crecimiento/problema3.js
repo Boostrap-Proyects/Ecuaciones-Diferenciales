@@ -1,39 +1,44 @@
 const error = document.querySelector('.error')
 const correct = document.querySelector('.correct')
 
+function paso1Ejecucion() {
+    const mensajes = paso1Colecta();
+    paso1Mensaje(mensajes);
+}
+
 function paso1Colecta() {
-    const tiempo1 = parseFloat(document.getElementById('tiempo1').value);
-    const cantidad1 = parseFloat(document.getElementById('cantidad1').value);
-    const potenciaT1 = parseFloat(document.getElementById('potenciaT1').value);
-    const interes = parseFloat(document.getElementById('interes').value);
+    const tiempoI = parseFloat(document.getElementById('tiempoI').value);
+    const poblacionI = parseFloat(document.getElementById('poblacionI').value);
+    const potenciaI = parseFloat(document.getElementById('potenciaI').value);
+    const tiempoF = parseFloat(document.getElementById('tiempoF').value);
+    const poblacionF = parseFloat(document.getElementById('poblacionF').value);
+    const potenciaF = parseFloat(document.getElementById('potenciaF').value);
 
     const mensajes = [];
     //Validar nulos y numéricos
     if (
-        isNaN(tiempo1) || isNaN(cantidad1) || isNaN(potenciaT1) || isNaN(interes)
+        tiempoI === "" || poblacionI === "" || potenciaI === "" ||
+        tiempoF === "" || poblacionF === "" || potenciaF === "" ||
+        isNaN(tiempoI) || isNaN(poblacionI) || isNaN(potenciaI) ||
+        isNaN(tiempoF) || isNaN(poblacionF) || isNaN(potenciaF)
     ) {
         mensajes.push("* Favor de llenar todos los campos");
     }
     // Validar los tiempos
-    if (tiempo1 !== 0) {
+    if (tiempoI !== 3 || tiempoF !== 10) {
         mensajes.push("* El tiempo es incorrecto");
     }
-    // Validar las cantidades
-    if (cantidad1 !== 27) {
-        mensajes.push("* La cantidad es incorrecta");
+    // Validar las poblaciones
+    if (poblacionI !== 400 || poblacionF !== 2000) {
+        mensajes.push("* La población es incorrecta");
     }
     // Validar las potencias
-    if (potenciaT1 !== 0) {
+    if (potenciaI !== 3 || potenciaF !== 10) {
         mensajes.push("* La potencia t es incorrecta");
-    }
-    // Validar las potencias
-    if (interes !== 0.075) {
-        mensajes.push("* El interes es inconrrecto");
     }
     // Todo correcto
     if (mensajes.length === 0) {
-        mensajes.push("Correcto!, ahora se sustituyen los valores en la solución. Favor de construir la fórmula para el pago:",true);
-        document.getElementById("cIn").textContent = "c = ¢27";
+        mensajes.push("Correcto!, ahora las C se igualan y se reduce e y la cantidad. Luego se aplica logaritmo natural en ambos lados para eliminar la e. Favor de completar el despeje para k:",true);
     }
     return mensajes;
 }
@@ -41,6 +46,8 @@ function paso1Colecta() {
 function paso1Mensaje(mensajes) {
     const mensajes1 = document.getElementById('mensajes1');
     const show2nd = document.getElementById('show2nd');
+    const showC2 = document.getElementById('showC2');
+    const showC1 = document.getElementById('showC1');
     mensajes1.innerHTML = '';
 
     if (mensajes.includes(true)) {
@@ -48,6 +55,8 @@ function paso1Mensaje(mensajes) {
         mensajes1.classList.add("correct"); 
         mensajes1.innerHTML = mensajes[0];
         show2nd.style.display = "block";
+        showC2.style.display = "block";
+        showC1.style.display = "block";
 
       } else {
         mensajes1.classList.remove("correct");
@@ -65,39 +74,29 @@ function paso1Mensaje(mensajes) {
     mensajes1.style.display = "block";
 }
 
-function paso1Ejecucion() {
-    const mensajes = paso1Colecta();
-    paso1Mensaje(mensajes);
-}
 
 
 
 
 
 function paso2Colecta() {
-    const cantidad2 = parseFloat(document.getElementById('cantidad2').value);
-    const interes2 = parseFloat(document.getElementById('interes2').value);
+    const despeje1 = document.getElementById('despeje1').value;
+    const despeje2 = parseFloat(document.getElementById('despeje2').value);
 
     const mensajes = [];
     //Validar nulos y numéricos
     if (
-        isNaN(cantidad2) || isNaN(interes2)
+        despeje1==="" || isNaN(despeje2)
     ) {
         mensajes.push("* Favor de llenar todos los campos");
     }
-    // Validar la cantidad
-    if (cantidad2 !== 27) {
-        mensajes.push("* La cantidad es icorrecta");
-    }
-    // Validar el interes
-    if (interes2 !== 0.075) {
-        mensajes.push("* El interes es icorrecto");
+     // Validar
+     if (despeje1 !== "ln(5)" || despeje2 !== 7) {
+        mensajes.push("* El despeje es incorrecto");
     }
     // Todo correcto
     if (mensajes.length === 0) {
-        mensajes.push("Correcto!, esta fórmula nos ayudara a encontrar el pago total por multa. Favor de utilizar la fórmula respecto a t:",true); 
-        var formulaAt = "<strong>A(t) = 27e<sup>0.075t</sup></strong>";
-        document.getElementById("formulaAt").innerHTML = formulaAt;
+        mensajes.push("Correcto!, ahora conociendo t=3 y k=0.23, se aplican a la fórmula. Favor de completar el despeje para C:",true);
     }
     return mensajes;
 }
@@ -105,6 +104,7 @@ function paso2Colecta() {
 function paso2Mensaje(mensajes) {
     const mensajes2 = document.getElementById('mensajes2');
     const show3th = document.getElementById('show3th');
+    const showk = document.getElementById('showk')
     mensajes2.innerHTML = '';
 
     if (mensajes.includes(true)) {
@@ -112,6 +112,7 @@ function paso2Mensaje(mensajes) {
         mensajes2.classList.add("correct"); 
         mensajes2.innerHTML = mensajes[0];
         show3th.style.display = "block";
+        showk.style.display = "block";
 
       } else {
         mensajes2.classList.remove("correct");
@@ -139,24 +140,25 @@ function paso2Ejecucion() {
 
 
 function paso3Colecta() {
-    const tiempoPasado1 = parseFloat(document.getElementById('tiempoPasado1').value);
-    const tiempoPasado2 = parseFloat(document.getElementById('tiempoPasado2').value);
+    const tasa_k = parseFloat(document.getElementById('tasa_k').value);
+    const tiempo_ = document.getElementById('tiempo_').value;
 
     const mensajes = [];
     //Validar nulos
     if (
-        isNaN(tiempoPasado1) || isNaN(tiempoPasado2)
+        isNaN(tasa_k) || isNaN(tiempo_)
     ) {
         mensajes.push("* Favor de llenar todos los campos");
     }
-    // Validar tiempos
-    if (tiempoPasado1 !== 72 || tiempoPasado2 !== 72) {
-        mensajes.push("* El tiempo es incorrecto");
+    // Validar Tiempo
+    if (tasa_k !== 0.23 || tiempo_ !== "-3") {
+        mensajes.push("* El despeje en las potencias es incorrecto");
     }
     // Todo correcto
     if (mensajes.length === 0) {
-        mensajes.push("Correcto!, El pago despúes de 72 años sería ¢5977.97  ∴  $59.77",true);
-        document.getElementById("centavos").textContent = " = ¢5977.97";
+        mensajes.push("Correcto!, ahora que conocemos la población solamente queda plantearse la siguiente pregunta:",true);
+        var resultadoCC = " = 200.6";
+        document.getElementById("resultadoCC").innerHTML = resultadoCC;
     }
     return mensajes;
 }

@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema de Crecimiento</title>
+    <title>Crecimiento natural</title>
 
     <!-- #FAVICON -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="../../../favicon.svg" type="image/svg+xml">
 
     <!-- #CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
 
     <!-- #GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,16 +87,16 @@
         <div class="header-bottom">
             <div class="container">
 
-                <a href="index.html" class="logo">
-                    <img src="./assets/images/logo-top.png" alt="logo-fitec">
+                <a href="../../../index.html" class="logo">
+                    <img src="../../../assets/images/logo-top.png" alt="logo-fitec">
                 </a>
 
                 <nav class="navbar" data-navbar>
 
                     <div class="navbar-top">
 
-                        <a href="index.html" class="logo">
-                            <img src="./assets/images/logo-top.png" alt="logo-fitec">
+                        <a href="../../../index.html" class="logo">
+                            <img src="../../../assets/images/logo-top.png" alt="logo-fitec">
                         </a>
 
                         <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
@@ -109,22 +109,22 @@
                         <ul class="navbar-list">
 
                             <li>
-                                <a href="index.html#inicio" class="navbar-link" data-nav-link>Inicio</a>
+                                <a href="../../../index.html#inicio" class="navbar-link" data-nav-link>Inicio</a>
                             </li>
 
                             <li>
-                                <a href="index.html#equipo" class="navbar-link" data-nav-link>Equipo</a>
+                                <a href="../../../index.html#equipo" class="navbar-link" data-nav-link>Equipo</a>
                             </li>
 
                             <li>
-                                <a href="index.html#material" class="navbar-link" data-nav-link>Material</a>
+                                <a href="../../../index.html#material" class="navbar-link" data-nav-link>Material</a>
                             </li>
 
                             <li>
-                                <a href="index.html#servicios" class="navbar-link" data-nav-link>Métodos</a>
+                                <a href="../../../index.html#metodos" class="navbar-link" data-nav-link>Métodos</a>
                                 <ul class="submenu navbar-link">
-                                    <li><a class="hover-text" href="solucionadorSNH.html">SistemaNH 2X2</a></li>
-                                    <li><a class="hover-text" href="problemasCI.html">Problemas de CI</a></li>
+                                    <li><a class="hover-text" href="../../../views/SNH/index.html">Sistemas no homogeneos</a></li>
+                                    <li><a class="hover-text" href="../../../views/PCI/index.html">Problemas de condiciones iniciales</a></li>
                                     <li><a class="hover-text" href="#">Teoría y fórmulas</a></li>
                                     <li><a class="hover-text" href="#">Ejercicios para el cuaderno</a></li>
                                 </ul>
@@ -160,13 +160,13 @@
         <article>
             <section class="service">
                 <div class="container">
-                    <h2 class="h2 section-title">Crecimiento y decrecimiento natural</h2>
+                    <h2 class="h2 section-title" style="margin-bottom: -25px;">Crecimiento y decrecimiento natural</h2>
                 </div>
             </section>
 
             <section class="features" id="contacto" style="background: hsl(0, 0%, 100%);">
                 <div class="container">
-                    <p class="section-subtitle" style="font-size: 1.5em; font: weight 20px;">Teoría</p>
+                    <p class="section-subtitle" style="font-size: 1.5em; font: weight 20px; margin-top: -50px;">Teoría</p>
                     <p style="text-align: justify;">
                         Las aplicaciones de este modelo pueden variar entre crecimiento de una población de bacterias,
                         media-vida
@@ -183,184 +183,55 @@
                         al tiempo se puede describir calculando la derivada de la variable P respecto al tiempo t, es
                         decir:
                     </p>
-                    <br>
-                    <p class="formulas">
+                    <p class="formulas" style="font-size: 19px; font-weight: bold;">
                         La ecuación diferencial <sup>dx</sup>&frasl;<sub>dt</sub> = kx , k ∈ ℝ
                     </p>
-                    <br>
                     <p style="text-align: justify;">
                         Para poder emplear este tipo de modelos, debemos suponer que la forma en que varía la población
                         en un instante de tiempo t es
                         proporcional al tamaño de la población en dicho tiempo t, de esta forma, obtenemos la siguiente
                         igualdad:
                     </p>
-                    <br>
-                    <p class="formulas">
+                    <p class="formulas" style="font-size: 19px; font-weight: bold;">
                         P'(t) = k⋅P(t)
                     </p>
-                    <br>
                     <p style="text-align: justify;">
                         Suponga un problema sobre el <strong>Crecimiento de una población</strong>, donde P(t) es el
-                        número de individuos en una población (humanos, insectos ó bacterias).
+                        número de individuos en una población (humanos, insectos o bacterias).
                         Con tasas de nacimiento y mortalidad constantes β y δ entonces:
                     </p>
-                    <br>
-                    <p class="formulas">
+                    <p class="formulas" style="font-size: 19px; font-weight: bold;">
                         La solución a la ecuación diferencial sería: P(t) = Ce<sup>kt</sup>
                     </p>
                     <br><br>
                     <div class="video-container">
                         <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/-_TXQAzK7aQ?si=lUHjurO40I8u4Ppy" frameborder="0"
+                        src="https://www.youtube.com/embed/not4z_aTfl0?si=TUDUG9N2FJ1lS-tY" frameborder="0"
                             allowfullscreen></iframe>
                     </div>
                 </div>
             </section>
 
-            <section class="service">
+            <section class="service" style="margin-top: -50px;">
                 <div class="container">
-                    <p class="section-subtitle" style="font-size: 1.5em; font: weight 20px;">Ejemplo</p>
+                    <p class="section-subtitle" style="font-size: 1.5em; font: weight 20px; margin-top: -50px;">Ejemplo</p>
                     <p style="text-align: justify;">
                         Una ciudad tenía una población de 25,000 habitantes en 1960 y de 30,000 en 1970. Considere que
-                        su población continuara creciendo exponencialmente a una tasa constante. ¿Que población
+                        su población continuara creciendo exponencialmente a una tasa constante. ¿Qué población
                         puede esperar el planificador de la ciudad para el año 2000?, ¿y para el año 2023?.
                     </p>
                     <br><br>
-                    <div class="img-center">
-                        <img src="./assets/images/problem1.png" style="background: transparent; border: none;"
-                            alt="Imagen">
-                    </div>
+                    <figure class="about-banner img-center" style="margin-bottom: -50px;">
+                        <img src="../../../assets/images/problem1.png" alt="Library">
+                    </figure>
                 </div>
             </section>
-
-            <section class="features" id="contacto" style="background: hsl(0, 0%, 100%);">
-                <div class="container">
-                    <p class="section-subtitle" style="font-size: 1.5em; font: weight 20px;">Problema</p>
-                    <p style="text-align: justify;">
-                        Para una ciudad con 10000 habitantes para el año 2000, y 13000 para el año 2020, ¿Que población
-                        se espera para el año 2045?
-                        ¿Y para el 2100 y 2145?. Considere que la población crece exponencialmente a una tasa constante.
-                    </p>
-                    <br>
-                    <p style="text-align: left;">
-                        <strong>P(t) = Ce<sup>kt</sup></strong>
-                    </p>
-                    <br>
-                    <form>
-                        <div class="contenedor-problema">
-                            <label for="tiempoI">t = </label>
-                            <input class="input-problema" style="margin-right: 120px;" type="text" id="tiempoI"
-                                required>
-                            <input class="input-problema" type="text" id="poblacionI" required>
-                            <label for="potenciaI"> = Ce<sup>k</sup></label>
-                            <input type="text" class="superindice" id="potenciaI" required>
-                            <span> = C</span>
-                            <div id="c1" style="margin-left: 120px;"></div>
-                            <br>
-                        </div>
-                        <br>
-                        <div class="contenedor-problema">
-                            <label for="tiempoF">t = </label>
-                            <input class="input-problema" style="margin-right: 120px;" type="text" id="tiempoF"
-                                required>
-                            <input class="input-problema" type="text" id="poblacionF" required>
-                            <label for="potenciaF"> = Ce<sup>k</sup></label>
-                            <input type="text" class="superindice" id="potenciaF" required>
-                            <div id="c2" style="margin-left: 145px;"></div>
-                        </div>
-                        <br>
-                        <div class="contenedor-problema">
-                            <button type="button" onclick="paso1Colecta(); paso1Ejecucion()"
-                                class="btn-customized">Revisar</button>
-                            <div id="mensajes1" class="error correct"></div>
-                        </div>
-                    </form>
-                    <br>
-                    <br>
-                    <form id="show2nd" class="showNextStep">
-                        <div class="contenedor-problema">
-                            <div id="c=c" style="margin-right: 100px;"></div>
-                            <label>e<sup>20k = </sup></label>
-                            <input class="input-problema" type="text" id="P1" required> /
-                            <input class="input-problema" type="text" id="P2" required>
-                        </div>
-                        <br>
-                        <div class="contenedor-problema">
-                            <button type="button" onclick="paso2Colecta(); paso2Ejecucion()"
-                                class="btn-customized">Revisar</button>
-                            <div id="mensajes2" class="error correct"></div>
-                        </div>
-                    </form>
-                    <br>
-                    <br>
-                    <form id="show3th" class="showNextStep">
-                        <div class="contenedor-problema">
-                            <div id="ultimos1" style="margin-right: 100px;"></div>
-                            <div id="ultimos2" style="margin-right: 100px;"></div>
-                            <label>k = </label>
-                            <input class="input-problema" type="text" id="PP1" required> /
-                            <input class="input-problema" type="text" id="PP2" required>
-                            <div id="equivalent" style="margin-left: 5px;"></div>
-                        </div>
-                        <br>
-                        <div class="contenedor-problema">
-                            <button type="button" onclick="paso3Colecta(); paso3Ejecucion()"
-                                class="btn-customized">Revisar</button>
-                            <div id="mensajes3" class="error correct"></div>
-                        </div>
-                    </form>
-                    <br>
-                    <br>
-                    <form id="show4th" class="showNextStep">
-                        <!-- separador de preguntas abiertas -->
-                        <hr>
-                        <br>
-                        <div id="pregunta1"></div>
-                        <br>
-                        <div class="contenedor-problema">
-                            <label>t = </label>
-                            <input class="input-problema" style="margin-right: 110px;" type="text" id="tPregunta1"
-                                required>
-                            <label>P(100) = 25000e</label>
-                            <input type="text" class="superindice" style="width: 4.5em;" id="k1" required>
-                            <label class="superindice" style="margin: 0;">(</label>
-                            <input type="text" class="superindice" style="margin-left: -20px;" id="t1" required>
-                            <label class="superindice" style="margin: 0;">)</label>
-                            <div id="habitantesP1"></div>
-                        </div>
-                        <br>
-                        <div class="contenedor-problema">
-                            <button type="button" onclick="paso4Colecta(); paso4Ejecucion()"
-                                class="btn-customized">Revisar</button>
-                            <div id="mensajes4" class="error correct"></div>
-                        </div>
-                    </form>
-                    <br>
-                    <br>
-                    <form id="show5th" class="showNextStep">
-                        <div id="pregunta2"></div>
-                        <br>
-                        <div class="contenedor-problema">
-                            <label>t = </label>
-                            <input class="input-problema" style="margin-right: 110px;" type="text" id="tPregunta2"
-                                required>
-                            <label>P(145) = 25000e</label>
-                            <input type="text" class="superindice" style="width: 4.5em;" id="k2" required>
-                            <label class="superindice" style="margin: 0;">(</label>
-                            <input type="text" class="superindice" style="margin-left: -20px;" id="t2" required>
-                            <label class="superindice" style="margin: 0;">)</label>
-                            <div id="habitantesP2"></div>
-                        </div>
-                        <br>
-                        <div class="contenedor-problema">
-                            <button type="button" onclick="paso5Colecta(); paso5Ejecucion()"
-                                class="btn-customized">Revisar</button>
-                            <div id="mensajes5" class="error correct"></div>
-                        </div>
-                        <br>
-                    </form>
-                </div>
-            </section>
+            <br>
+            <br>
+            <iframe class="iframe-problems" src="problema1.html" width="100%" height="500"></iframe>
+            <iframe class="iframe-problems" src="problema2.html" width="100%" height="500"></iframe>
+            <iframe class="iframe-problems" src="problema3.html" width="100%" height="500"></iframe>
+              
         </article>
     </main>
 
@@ -373,8 +244,8 @@
 
                 <div class="footer-brand">
 
-                    <a href="index.html" class="logo">
-                        <img src="./assets/images/logo-bottom.png" alt="logo-fitec">
+                    <a href="../../../index.html" class="logo">
+                        <img src="../../../assets/images/logo-bottom.png" alt="logo-fitec">
                     </a>
 
                     <ul class="contact-list">
@@ -441,19 +312,19 @@
                         </li>
 
                         <li>
-                            <a href="index.html#inicio" class="footer-link">Inicio</a>
+                            <a href="../../../index.html#inicio" class="footer-link">Inicio</a>
                         </li>
 
                         <li>
-                            <a href="index.html#equipo" class="footer-link">Equipo</a>
+                            <a href="../../../index.html#equipo" class="footer-link">Equipo</a>
                         </li>
 
                         <li>
-                            <a href="index.html#material" class="footer-link">Material</a>
+                            <a href="../../../index.html#material" class="footer-link">Material</a>
                         </li>
 
                         <li>
-                            <a href="index.html#servicios" class="footer-link">Métodos</a>
+                            <a href="../../../index.html#metodos" class="footer-link">Métodos</a>
                         </li>
 
                     </ul>
@@ -474,13 +345,13 @@
                                 class="footer-link">Repositorio</a>
                         </li>
 
-                        <li>
-                            <a href="#" class="footer-link">Galeria</a>
-                        </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC-LBpwztGMbeeNQi8WOpLqg" target="_blank" class="footer-link">Canal</a>
+              </li>
 
-                        <li>
-                            <a href="#" class="footer-link">Referencias</a>
-                        </li>
+              <li>
+                <a href="#" class="footer-link">Ejercicios</a>
+              </li>
 
                     </ul>
 
@@ -518,12 +389,10 @@
 
         <div class="footer-bottom">
             <div class="container">
-
                 <p class="copyright">
                     Ecuaciones Diferenciales
                     &copy; 2024 <a href="#"></a>
                 </p>
-
             </div>
         </div>
 
@@ -531,9 +400,7 @@
 
 
     <!-- #SCRIPTS -->
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/problemaCrecimiento.js"></script>
-
+    <script src="../../../assets/js/script.js"></script>
 
     <!-- #ICONS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
