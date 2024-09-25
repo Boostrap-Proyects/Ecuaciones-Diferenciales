@@ -284,7 +284,7 @@ function gaussJordan(x, y, verbose = 0) {
 	return augmentedMat.map(row => row[n]);
 }
 
-////////////////////////////////////// Utilerias de simplify y GaussJordan //////////////////////////////////////
+////////////////////////////////////// Utilerías de simplify y GaussJordan //////////////////////////////////////
 
 function combLikeTerms(equation) {
 	var parts = splitAddSub(equation)[0];

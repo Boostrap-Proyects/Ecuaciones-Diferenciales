@@ -482,8 +482,8 @@ button, a { transition: var(--transition); }
 .hero-title { margin-bottom: 20px; }
 
 .hero-text {
-  color: var(--cadet);
-  font-size: var(--fs-5);
+  color: hsl(193, 9%, 21%);
+  font-size: 1.2rem;
   line-height: 1.8;
   padding-left: 15px;
   border-left: 1px solid;
@@ -2002,4 +2002,51 @@ li:hover .submenu {
 ::placeholder {
   color: #555;
   font-size: 12px;
+}
+
+.cta2 {
+  background: url(../images/hero-counter.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+  height: 30vh;
+  margin-top: -10vh;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-between;  /* Distribuye espacio entre los elementos */
+  align-items: flex-start;         /* Alinea los elementos desde el inicio para evitar desajustes verticales */
+  gap: 20px;                       /* Espacio entre los elementos */
+  flex-wrap: nowrap;               /* Evita que los elementos salten de línea */
+}
+
+.counter-list {
+  list-style: none;                /* Elimina el estilo de lista por defecto */
+  margin: 0;                       /* Ajusta el margen para evitar desplazamientos no deseados */
+  padding: 0;
+  display: flex;
+  flex-direction: column;          /* Asegura que los elementos internos estén en columna */
+  align-items: center;             /* Centra horizontalmente los elementos dentro de cada <ul> */
+  text-align: center;              /* Asegura que el contenido esté centrado */
+}
+
+.counter-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;             /* Centra el enlace y su contenido */
+  text-align: center;              /* Asegura que el texto esté centrado */
+}
+
+.counter-list-title {
+  font-size: 24px;                 /* Tamaño uniforme para el título */
+  margin-bottom: 10px;             /* Añade espacio entre el número y el texto */
+}
+
+.counter-stat {
+  color: #fff;
+}
+
+.counter-stat .null {
+  margin: -1.5vh;
+  color: #fff;
 }
