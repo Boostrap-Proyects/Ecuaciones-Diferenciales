@@ -16,10 +16,7 @@
 
 :root {
 
-  /**
-   * colors
-   */
-
+  /****colors****/
   --dark-jungle-green: hsl(188, 63%, 7%);
   --prussian-blue: hsl(200, 69%, 14%);
   --raisin-black-1: hsl(227, 29%, 13%);
@@ -36,10 +33,7 @@
   --black: hsl(0, 0%, 0%);
   --opal: hsl(180, 20%, 62%);
 
-  /**
-   * typography
-   */
-
+  /****typography****/
   --ff-nunito-sans: "Nunito Sans", sans-serif;
   --ff-poppins: "Poppins", sans-serif;
 
